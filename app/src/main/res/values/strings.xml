@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Ho_Guom_Explore</string>
+    <string name="title_activity_login">LoginActivity</string>
 </resources>
