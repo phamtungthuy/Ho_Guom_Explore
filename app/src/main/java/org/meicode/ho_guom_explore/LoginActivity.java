@@ -9,24 +9,34 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 public class LoginActivity extends AppCompatActivity {
     EditText edUsername, edPassword;
-    Button btn;
+    Button loginBtn;
+    ImageButton rgBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         edUsername = findViewById(R.id.editTextLoginUsername);
         edPassword = findViewById(R.id.editTextLoginPassword);
-        btn = findViewById(R.id.buttonLogin);
+        loginBtn = findViewById(R.id.buttonLogin);
+        rgBtn = findViewById(R.id.buttonRegister);
 
         handleShowPassword();
 
-        btn.setOnClickListener((new View.OnClickListener() {
+        loginBtn.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            }
+        }));
+
+        rgBtn.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
             }
         }));
     }
