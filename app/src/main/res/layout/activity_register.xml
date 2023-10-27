@@ -123,11 +123,12 @@
         android:layout_width="match_parent"
         android:text="Click to login"
         android:gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="previousViewId" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegister"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
