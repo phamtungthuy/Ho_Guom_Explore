@@ -115,12 +115,13 @@
     <!--    </LinearLayout>-->
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="419dp"
+        android:layout_height="344dp"
         android:overScrollMode="never"
         android:scrollbars="none"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header">
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        tools:layout_editor_absoluteX="-4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -131,11 +132,10 @@
                 android:id="@+id/layoutProduce"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background=""
+                android:layout_marginLeft="10dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
-                android:layout_marginLeft="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -144,8 +144,7 @@
                     android:layout_height="150dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/button_round"
-                    />
+                    android:src="@drawable/button_round" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -154,7 +153,7 @@
                     android:text="Giới thiệu Hồ Gươm"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -163,12 +162,11 @@
                 android:id="@+id/layoutLocation"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background=""
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="10dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="10dp"
                 app:layout_constraintStart_toEndOf="@id/layoutProduce"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -186,7 +184,7 @@
                     android:text="Địa điểm tham quan"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -195,7 +193,6 @@
                 android:id="@+id/layoutEvent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background=""
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
@@ -216,7 +213,7 @@
                     android:text="Sự kiện"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -225,12 +222,11 @@
                 android:id="@+id/layoutService"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background=""
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="10dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="10dp"
                 app:layout_constraintStart_toEndOf="@id/layoutEvent"
                 app:layout_constraintTop_toTopOf="@id/layoutEvent">
 
@@ -248,7 +244,7 @@
                     android:text="Dịch vụ"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -257,7 +253,6 @@
                 android:id="@+id/layoutAccomodation"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background=""
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
@@ -278,7 +273,7 @@
                     android:text="Ẩm thực &amp; lưu trú"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -287,12 +282,11 @@
                 android:id="@+id/layoutFeedback"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background=""
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="10dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="10dp"
                 app:layout_constraintStart_toEndOf="@id/layoutAccomodation"
                 app:layout_constraintTop_toTopOf="@id/layoutAccomodation">
 
@@ -310,7 +304,7 @@
                     android:text="Góp ý"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
