@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-  
+    <item android:id="@+id/menuHome"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+
+    <item android:id="@+id/menuMap"
+        android:icon="@drawable/ic_map"
+        android:title="Map" />
+
+    <item android:id="@+id/menuCall"
+        android:icon="@drawable/ic_call"
+        android:title="Call" />
+
+    <item android:id="@+id/menu_notification"
+        android:icon="@drawable/ic_notification"
+        android:title="Notification" />
+
+    <item android:id="@+id/menuMore"
+        android:icon="@drawable/ic_more"
+        android:title="More" />
 </menu>
