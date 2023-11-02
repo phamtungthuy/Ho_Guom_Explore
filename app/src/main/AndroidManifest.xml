@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Ho_Guom_Explore"
         tools:targetApi="31">
         <activity
+            android:name=".CuisineDetail"
+            android:exported="false" />
+        <activity
+            android:name=".CuisineAndAccommodation"
+            android:exported="true" />
+        <activity
             android:name=".HomePageActivity"
             android:exported="true" />
         <activity
