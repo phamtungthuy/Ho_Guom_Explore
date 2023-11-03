@@ -33,7 +33,7 @@ public class HomePageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_homepage);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
-
+        // first fragment when open app
         getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
