@@ -11,7 +11,6 @@ import android.widget.Button;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-import org.meicode.ho_guom_explore.databinding.ActivityMainBinding;
 
 public class HomePageActivity extends AppCompatActivity {
 
@@ -24,7 +23,6 @@ public class HomePageActivity extends AppCompatActivity {
     ContactFragment contactFragment = new ContactFragment();
     NotificationFragment notificationFragment = new NotificationFragment();
 
-    ActivityMainBinding binding;
 
 
     @Override
