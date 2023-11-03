@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<!--    header-->
+    <!--    header-->
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
-            android:text="HO GUOM"
+            android:text="Các chức năng khác"
             android:textSize="35sp"
             android:textStyle="bold" />
 
@@ -34,7 +34,7 @@
 
     </LinearLayout>
 
-<!--body-->
+    <!--body-->
     <LinearLayout
         android:id="@+id/body"
         android:layout_width="match_parent"
@@ -82,24 +82,6 @@
 
     </LinearLayout>
 
-<!--navigation-->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:outlineProvider="bounds"
-        app:backgroundTint="@color/white"
-        app:itemIconSize="40dp"
-        app:labelVisibilityMode="labeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/navigation_menu" />
 
-    <View
-        android:id="@+id/viewDivider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorDevider"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
