@@ -2,4 +2,6 @@
     <string name="app_name">Ho_Guom_Explore</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="home">Home</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

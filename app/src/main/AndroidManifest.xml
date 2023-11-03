@@ -13,9 +13,32 @@
         android:theme="@style/Theme.Ho_Guom_Explore"
         tools:targetApi="31">
         <activity
+            android:name=".RestaurantList"
+            android:exported="true" />
+        <activity
+            android:name=".HotelList"
+            android:exported="true" />
+        <activity
+            android:name=".CuisineList"
+            android:exported="true" />
+        <activity
+            android:name=".HotelDetail"
+            android:exported="false" />
+        <activity
+            android:name=".RestaurantDetail"
+            android:exported="false" />
+        <activity
+            android:name=".CuisineDetail"
+            android:exported="true" />
+        <activity
+            android:name=".CuisineAndAccommodation"
+            android:exported="true" />
+        <activity
+            android:name=".HomePageActivity"
+            android:exported="true" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
-
         <activity
             android:name=".LoginActivity"
             android:exported="true">
