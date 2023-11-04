@@ -71,7 +71,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_weight="0.2"
-                    android:src="@tools:sample/avatars"
+                    android:src="@drawable/visit1"
                     tools:srcCompat="@drawable/visit1" />
 
                 <TextView
@@ -110,7 +110,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_weight="0.2"
-                    android:src="@tools:sample/avatars"
+                    android:src="@drawable/visit2"
                     tools:srcCompat="@drawable/visit2" />
 
                 <TextView
@@ -148,7 +148,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_weight="0.2"
-                    android:src="@tools:sample/avatars"
+                    android:src="@drawable/visit3"
                     tools:srcCompat="@drawable/visit3" />
 
                 <TextView
@@ -186,7 +186,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_weight="0.2"
-                    android:src="@tools:sample/avatars"
+                    android:src="@drawable/visit4"
                     tools:srcCompat="@drawable/visit4" />
 
                 <TextView
@@ -225,7 +225,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_weight="0.2"
-                    android:src="@tools:sample/avatars"
+                    android:src="@drawable/visit5"
                     tools:srcCompat="@drawable/visit5" />
 
                 <TextView
@@ -264,7 +264,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_weight="0.2"
-                    android:src="@tools:sample/avatars"
+                    android:src="@drawable/visit6"
                     tools:srcCompat="@drawable/visit6" />
 
                 <TextView

@@ -64,9 +64,9 @@
                 android:layout_gravity="center_horizontal"
                 android:textSize="28sp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf=""
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/ins2"/>
 
             <TextView
                 android:id="@+id/ins2"
