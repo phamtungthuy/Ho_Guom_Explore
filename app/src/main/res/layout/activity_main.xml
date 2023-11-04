@@ -21,4 +21,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:id="@+id/uploadPage"
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:text="Go to Upload Page" />
+
+    <Button
+        android:id="@+id/userPage"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:text="Go to User page" />
+
 </LinearLayout>

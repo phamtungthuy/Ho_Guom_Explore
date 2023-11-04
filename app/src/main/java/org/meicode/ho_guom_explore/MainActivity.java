@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     FirebaseAuth auth;
-    Button button;
+    Button button, uploadPage, userPage;
     TextView textView;
     FirebaseUser user;
 
@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
+        uploadPage = findViewById(R.id.uploadPage);
+        userPage = findViewById(R.id.userPage);
         textView = findViewById(R.id.user_details);
         user = auth.getCurrentUser();
 
@@ -43,6 +45,22 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        uploadPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, UploadCuisineAndAccommodation.class);
+                startActivity(intent);
+            }
+        });
+
+        userPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, HomePageActivity.class);
+                startActivity(intent);
             }
         });
     }
