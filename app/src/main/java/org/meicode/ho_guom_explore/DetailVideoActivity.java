@@ -28,7 +28,7 @@ public class DetailVideoActivity extends AppCompatActivity {
 
         VideoView videoView = findViewById(R.id.video_view);
 
-        String path = "android.resource://" + getPackageName() + "/" + R.raw.introHoGuom;
+        String path = "android.resource://" + getPackageName() + "/" + R.raw.intro;
 
         Uri uri = Uri.parse(path);
 
