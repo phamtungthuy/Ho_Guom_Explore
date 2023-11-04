@@ -15,6 +15,7 @@ public class VisitDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_visitdetail);
 
         ImageButton vsBackBtn = findViewById(R.id.vs_back_btn);
+        ImageButton mapButton = findViewById(R.id.vs_map_btn);
 
         vsBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,6 +25,15 @@ public class VisitDetailActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(VisitDetailActivity.this, VisitMapActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Intent intent = getIntent();
         String buttonText = intent.getStringExtra("buttonText");
 
