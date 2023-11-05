@@ -57,7 +57,7 @@ public class UploadActivity extends AppCompatActivity {
 
         dropdown = findViewById(R.id.fieldList);
 //create a list of items for the spinner.
-        String[] items = new String[]{"Restaurant", "Cuisine", "Hotel"};
+        String[] items = new String[]{"Restaurant", "Cuisine", "Hotel", "Homestay"};
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
 //There are multiple variations of this, but this is the basic variant.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);

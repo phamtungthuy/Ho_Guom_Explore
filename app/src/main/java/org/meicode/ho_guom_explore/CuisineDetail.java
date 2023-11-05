@@ -33,13 +33,21 @@ public class CuisineDetail extends AppCompatActivity {
         address = findViewById(R.id.address);
         titleField = findViewById(R.id.titleField);
 
+        String dataTitle = getIntent().getStringExtra("title");
+        String dataDescription = getIntent().getStringExtra("description");
+        String dataAddress = getIntent().getStringExtra("address");
+        String dataImage = getIntent().getStringExtra("image");
+        String dataPhoneNumber = getIntent().getStringExtra("phoneNumber");
+        String dataWebsite = getIntent().getStringExtra("website");
+        String dataEmail = getIntent().getStringExtra("email");
+
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Uri gmmIntentUri = Uri.parse("geo:21.0285,105.8542?q=Hồ Gươm");
+                        Uri gmmIntentUri = Uri.parse("geo:21.0285,105.8542?q=" + dataAddress);
                         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                         mapIntent.setPackage("com.google.android.apps.maps");
                         startActivity(mapIntent);
@@ -48,13 +56,7 @@ public class CuisineDetail extends AppCompatActivity {
             }
         });
 
-        String dataTitle = getIntent().getStringExtra("title");
-        String dataDescription = getIntent().getStringExtra("description");
-        String dataAddress = getIntent().getStringExtra("address");
-        String dataImage = getIntent().getStringExtra("image");
-        String dataPhoneNumber = getIntent().getStringExtra("phoneNumber");
-        String dataWebsite = getIntent().getStringExtra("website");
-        String dataEmail = getIntent().getStringExtra("email");
+
 
         titleField.setText(dataTitle);
         title.setText(dataTitle);

@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,19 +33,25 @@ public class CuisineAndAccommodation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cuisine_and_accommodation);
 
-        List<CuisineAndAccommodationDataClass> cuisineList = new ArrayList<>();
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Cuisine");
+        addListenerToDatabaseReference("Cuisine");
+        addListenerToDatabaseReference("Restaurant");
+        addListenerToDatabaseReference("Hotel");
+        addListenerToDatabaseReference("Homestay");
+    }
 
+    private void addListenerToDatabaseReference(String fieldName) {
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference(fieldName);
+        List<CuisineAndAccommodationDataClass> cuisineAndAcommodationList = new ArrayList<>();
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     CuisineAndAccommodationDataClass cuisineData = snapshot.getValue(CuisineAndAccommodationDataClass.class);
-                    cuisineList.add(cuisineData);
+                    cuisineAndAcommodationList.add(cuisineData);
                 }
 
                 // Sau khi lấy dữ liệu xong, cập nhật giao diện
-                updateUIWithCuisineData(cuisineList);
+                updateUIWithCuisineData(cuisineAndAcommodationList, fieldName);
             }
 
             @Override
@@ -52,11 +59,25 @@ public class CuisineAndAccommodation extends AppCompatActivity {
                 // Xử lý lỗi nếu có
             }
         });
-
     }
 
-    private void updateUIWithCuisineData(List<CuisineAndAccommodationDataClass> cuisineList) {
-        LinearLayout horizontalLayout = findViewById(R.id.cuisine);
+    private void updateUIWithCuisineData(List<CuisineAndAccommodationDataClass> cuisineList, String fieldName) {
+        LinearLayout horizontalLayout = null;
+        switch (fieldName) {
+            case "Cuisine":
+                horizontalLayout = findViewById(R.id.cuisine);
+                break;
+            case "Restaurant":
+                horizontalLayout = findViewById(R.id.restaurant);
+                break;
+            case "Hotel":
+                horizontalLayout = findViewById(R.id.hotel);
+                break;
+            case "Homestay":
+                horizontalLayout = findViewById(R.id.homestay);
+                break;
+        }
+
 
         for (CuisineAndAccommodationDataClass cuisineData : cuisineList) {
             CardView cardView = new CardView(this);
