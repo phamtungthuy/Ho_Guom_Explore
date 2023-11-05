@@ -119,13 +119,14 @@
         android:layout_height="0dp"
         android:overScrollMode="never"
         android:scrollbars="none"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintTop_toBottomOf="@id/header"
-        tools:layout_editor_absoluteX="-4dp">
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
 
             <!--  giới thiệu Hồ Gươm  -->
             <LinearLayout
@@ -140,11 +141,12 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/button_round" />
+                    android:src="@drawable/button_round"
+                    android:background="@drawable/ic_museum" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -171,11 +173,12 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/button_round" />
+                    android:src="@drawable/button_round"
+                    android:background="@drawable/ic_place"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -200,11 +203,12 @@
                 app:layout_constraintTop_toBottomOf="@id/layoutProduce">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/button_round" />
+                    android:src="@drawable/button_round"
+                    android:background="@drawable/ic_calender"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -231,11 +235,12 @@
                 app:layout_constraintTop_toTopOf="@id/layoutEvent">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/button_round" />
+                    android:src="@drawable/button_round"
+                    android:background="@drawable/ic_service"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -260,8 +265,8 @@
                 app:layout_constraintTop_toBottomOf="@id/layoutEvent">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
                     android:src="@drawable/button_round" />
@@ -291,11 +296,12 @@
                 app:layout_constraintTop_toTopOf="@id/layoutAccomodation">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/button_round" />
+                    android:src="@drawable/button_round"
+                    android:background="@drawable/ic_letter"/>
 
                 <TextView
                     android:layout_width="match_parent"
