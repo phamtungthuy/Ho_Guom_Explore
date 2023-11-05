@@ -10,7 +10,6 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
         app:cardCornerRadius="30dp"
@@ -66,13 +65,60 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/uploadLang"
+                android:id="@+id/uploadAddress"
                 android:background="@drawable/lavender_border"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
-                android:hint="Enter language"
+                android:hint="Enter Address"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/lavender"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/uploadPhoneNumber"
+                android:background="@drawable/lavender_border"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Enter Phone Number"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/lavender"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/uploadWebsite"
+                android:background="@drawable/lavender_border"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Enter Website"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/lavender"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/uploadEmail"
+                android:background="@drawable/lavender_border"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Enter Email"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/lavender"
+                />
+
+            <Spinner
+                android:id="@+id/fieldList"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:padding="8dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"
+                app:cornerRadius ="20dp"
                 />
 
             <Button

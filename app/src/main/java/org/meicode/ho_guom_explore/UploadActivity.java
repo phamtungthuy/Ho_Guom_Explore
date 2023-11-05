@@ -13,9 +13,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -33,7 +35,8 @@ public class UploadActivity extends AppCompatActivity {
 
     ImageView uploadImage;
     Button saveButton;
-    EditText uploadTopic, uploadDesc, uploadLang;
+    EditText uploadTopic, uploadDesc, uploadAddress, uploadPhoneNumber, uploadWebsite, uploadEmail;
+    Spinner dropdown;
     String imageURL;
     Uri uri;
 
@@ -45,10 +48,21 @@ public class UploadActivity extends AppCompatActivity {
         uploadImage = findViewById(R.id.uploadImage);
         uploadDesc = findViewById(R.id.uploadDesc);
         uploadTopic = findViewById(R.id.uploadTopic);
-        uploadLang = findViewById(R.id.uploadLang);
+        uploadAddress = findViewById(R.id.uploadAddress);
+        uploadPhoneNumber =findViewById(R.id.uploadPhoneNumber);
+        uploadWebsite = findViewById(R.id.uploadWebsite);
+        uploadEmail = findViewById(R.id.uploadEmail);
 
         saveButton = findViewById(R.id.saveButton);
 
+        dropdown = findViewById(R.id.fieldList);
+//create a list of items for the spinner.
+        String[] items = new String[]{"Restaurant", "Cuisine", "Hotel"};
+//create an adapter to describe how the items are displayed, adapters are used in several places in android.
+//There are multiple variations of this, but this is the basic variant.
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+//set the spinners adapter to the previously created one.
+        dropdown.setAdapter(adapter);
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 new ActivityResultCallback<ActivityResult>() {
@@ -86,7 +100,7 @@ public class UploadActivity extends AppCompatActivity {
     }
 
     public void saveData() {
-        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("Android Images")
+        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child(dropdown.getSelectedItem().toString())
                 .child(uri.getLastPathSegment());
 
         AlertDialog.Builder builder = new AlertDialog.Builder(UploadActivity.this);
@@ -117,13 +131,18 @@ public class UploadActivity extends AppCompatActivity {
     public void uploadData() {
         String title = uploadTopic.getText().toString();
         String desc = uploadDesc.getText().toString();
-        String lang = uploadLang.getText().toString();
-        
+        String address = uploadAddress.getText().toString();
+        String phoneNumber = uploadPhoneNumber.getText().toString();
+        String website = uploadWebsite.getText().toString();
+        String email = uploadEmail.getText().toString();
+
+        String selectedField = dropdown.getSelectedItem().toString();
+
         CuisineAndAccommodationDataClass dataClass = new CuisineAndAccommodationDataClass(title,
-                desc, lang, imageURL);
+                desc, address, imageURL, phoneNumber, website, email);
 
 
-        FirebaseDatabase.getInstance().getReference("Android Tutorials").child(title)
+        FirebaseDatabase.getInstance().getReference(selectedField).child(title)
                 .setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

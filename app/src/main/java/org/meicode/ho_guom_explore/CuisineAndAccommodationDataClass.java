@@ -3,8 +3,11 @@ package org.meicode.ho_guom_explore;
 public class CuisineAndAccommodationDataClass {
     private String dataTitle;
     private String dataDescription;
-    private String dataLang;
+    private String dataAddress;
     private String dataImage;
+    private String dataPhoneNumber;
+    private String dataWebsite;
+    private String dataEmail;
 
     public String getDataTitle() {
         return dataTitle;
@@ -14,19 +17,34 @@ public class CuisineAndAccommodationDataClass {
         return dataDescription;
     }
 
-    public String getDataLang() {
-        return dataLang;
+    public String getDataAddress() {
+        return dataAddress;
     }
 
     public String getDataImage() {
         return dataImage;
     }
 
-    public CuisineAndAccommodationDataClass(String dataTitle, String dataDescription, String dataLang, String dataImage) {
+    public String getDataPhoneNumber() {
+        return dataPhoneNumber;
+    }
+
+    public String getDataWebsite() {
+        return dataWebsite;
+    }
+
+    public String getDataEmail() {
+        return dataEmail;
+    }
+
+    public CuisineAndAccommodationDataClass(String dataTitle, String dataDescription, String dataAddress, String dataImage, String dataPhoneNumber, String dataWebsite, String dataEmail) {
         this.dataTitle = dataTitle;
         this.dataDescription = dataDescription;
-        this.dataLang = dataLang;
+        this.dataAddress = dataAddress;
         this.dataImage = dataImage;
+        this.dataPhoneNumber = dataPhoneNumber;
+        this.dataWebsite = dataWebsite;
+        this.dataEmail = dataEmail;
     }
 
     public CuisineAndAccommodationDataClass() {
