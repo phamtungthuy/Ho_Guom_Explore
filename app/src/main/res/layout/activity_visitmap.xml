@@ -32,48 +32,18 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <ImageButton
-            android:id="@+id/vs_map_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_alignParentEnd="true"
-            android:background="?android:attr/selectableItemBackground"
-            android:src="@android:drawable/ic_menu_mapmode"
-            tools:src="@drawable/ic_map" />
     </RelativeLayout>
-    <ImageView
-        android:id="@+id/img"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/visit1"
-        app:layout_constraintTop_toBottomOf="@+id/header" />
 
-    <ScrollView
+
+    <WebView
+        android:id="@+id/webview"
         android:layout_width="match_parent"
-        android:layout_height="352dp"
-        android:overScrollMode="never"
-        android:scrollbars="none"
+        android:layout_height="602dp"
         app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
-        app:layout_constraintTop_toBottomOf="@id/img"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="  Cầu Thê Húc với màu sơn son như một dải lụa mềm mại vắt qua làn nước xanh đặc trưng của Hồ Gươm, tạo nên vẻ đẹp hài hòa, bắt mắt. Được thần Siêu (Nguyễn Văn Siêu) xây dựng vào năm 1865. Cầu Thê Húc là một cây cầu màu đỏ son, làm bẳng gỗ, một cây cầu nối liền giữa bờ với đền Ngọc Sơn ở giữa hồ Hoàn Kiếm. Cầu Thê Húc có ý nghĩa là “nơi lưu lại ánh sáng” hay “nơi ngưng tụ hào quang”. Cầu gồm 15 nhịp, có 32 chân cột gỗ tròn xếp thành 16 đôi, mặt cầu lát ván, thành sơn màu đỏ sẫm, chữ Thê Húc được thếp vàng."
-                android:textSize="24sp"/>
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

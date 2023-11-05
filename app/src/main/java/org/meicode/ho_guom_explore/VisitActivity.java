@@ -29,7 +29,8 @@ public class VisitActivity extends AppCompatActivity {
         mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Mở bản đồ khu vực Hồ Gươm
+                Intent intent = new Intent(VisitActivity.this, VisitMapActivity.class);
+                startActivity(intent);
             }
         });
 
