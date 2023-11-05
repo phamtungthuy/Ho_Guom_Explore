@@ -119,21 +119,23 @@
         android:layout_height="0dp"
         android:overScrollMode="never"
         android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
+
+            android:layout_marginTop="25dp">
 
             <!--  giới thiệu Hồ Gươm  -->
             <LinearLayout
                 android:id="@+id/layoutProduce"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
@@ -141,12 +143,12 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:background="@drawable/ic_museum"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/button_round"
-                    android:background="@drawable/ic_museum" />
+                    android:src="@drawable/button_round" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -164,8 +166,7 @@
                 android:id="@+id/layoutLocation"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginLeft="80dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
@@ -173,12 +174,12 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:background="@drawable/ic_place"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/button_round"
-                    android:background="@drawable/ic_place"/>
+                    android:src="@drawable/button_round" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -203,12 +204,12 @@
                 app:layout_constraintTop_toBottomOf="@id/layoutProduce">
 
                 <ImageView
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:background="@drawable/ic_calender"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/button_round"
-                    android:background="@drawable/ic_calender"/>
+                    android:src="@drawable/button_round" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -226,8 +227,7 @@
                 android:id="@+id/layoutService"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginLeft="80dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
@@ -235,12 +235,12 @@
                 app:layout_constraintTop_toTopOf="@id/layoutEvent">
 
                 <ImageView
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:background="@drawable/ic_service"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/button_round"
-                    android:background="@drawable/ic_service"/>
+                    android:src="@drawable/button_round" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -265,10 +265,11 @@
                 app:layout_constraintTop_toBottomOf="@id/layoutEvent">
 
                 <ImageView
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
+                    android:background="@drawable/ic_accomodation"
                     android:src="@drawable/button_round" />
 
                 <TextView
@@ -287,8 +288,7 @@
                 android:id="@+id/layoutFeedback"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="45dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginLeft="80dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
@@ -296,12 +296,12 @@
                 app:layout_constraintTop_toTopOf="@id/layoutAccomodation">
 
                 <ImageView
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:background="@drawable/ic_letter"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/button_round"
-                    android:background="@drawable/ic_letter"/>
+                    android:src="@drawable/button_round" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -318,7 +318,7 @@
 
     </ScrollView>
 
-<!--    <FrameLayout-->
+    <!--    <FrameLayout-->
 <!--        android:layout_width="0dp"-->
 <!--        android:layout_height="0dp"-->
 <!--        android:id="@+id/container"-->

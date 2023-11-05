@@ -2,21 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/menuHome"
         android:icon="@drawable/ic_home"
-        android:title="@string/home" />
+        android:title="Trang chủ" />
 
     <item android:id="@+id/menuMap"
         android:icon="@drawable/ic_map"
-        android:title="Map" />
+        android:title="Bản đồ" />
 
     <item android:id="@+id/menuContact"
         android:icon="@drawable/ic_call"
-        android:title="Call" />
+        android:title="Liên lạc" />
 
     <item android:id="@+id/menuNotification"
         android:icon="@drawable/ic_notification"
-        android:title="Notification" />
+        android:title="Thông báo" />
 
     <item android:id="@+id/menuMore"
         android:icon="@drawable/ic_more"
-        android:title="More" />
+        android:title="Thêm" />
 </menu>
