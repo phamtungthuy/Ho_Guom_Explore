@@ -13,6 +13,15 @@
         android:theme="@style/Theme.Ho_Guom_Explore"
         tools:targetApi="31">
         <activity
+            android:name=".UploadDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UploadCuisineAndAccommodation"
+            android:exported="true" />
+        <activity
+            android:name=".UploadActivity"
+            android:exported="false" />
+        <activity
             android:name=".CommentActivity"
             android:exported="true" />
         <activity

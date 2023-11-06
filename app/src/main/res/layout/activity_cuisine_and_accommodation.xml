@@ -9,12 +9,13 @@
 
     <LinearLayout
         android:id="@+id/header"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_weight="1"
         android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
 
         <TextView
             android:id="@+id/title"
@@ -24,19 +25,15 @@
             android:text="Ăn gì, ở đâu?"
             android:textSize="35sp"
             android:textStyle="bold" />
-
-
-
     </LinearLayout>
-
     <ScrollView
-        android:layout_width="415dp"
-        android:layout_height="602dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/scrollView"
         app:layout_constraintTop_toBottomOf="@+id/header"
-        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         >
 
         <LinearLayout
@@ -47,7 +44,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+
+                >
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -59,167 +58,16 @@
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:scrollbars="none">
+                    android:scrollbars="none"
+
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/cuisine_2"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="Bánh khúc Quân 35 Cầu Gỗ"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/cuisine_3"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="Bún thang Bà Đức"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/cuisine_4"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="Phở Bát Đàn"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/cuisine_5"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="Cơm sườn 47 Đào Duy Từ"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/cuisine_6"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="Banh mi"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
+                        android:orientation="horizontal"
+                        android:id="@+id/cuisine"
+                        >
 
                     </LinearLayout>
                 </HorizontalScrollView>
@@ -253,131 +101,9 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/restaurant_1"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="Nhà hàng lớn ở khu phố Pháp - Hà Nội"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/restaurant_2"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="Stellar Steakhouse"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/restaurant_3"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="Lake View Side Restaurant"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/restaurant_4"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="The Rhythms Restaurant"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
+                        android:orientation="horizontal"
+                        android:id="@+id/restaurant"
+                        >
 
 
                     </LinearLayout>
@@ -411,162 +137,10 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:id="@+id/hotel"
+                        >
 
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/hotel_1"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="The Oriental Jade Hotel"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/hotel_2"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="Solaria Hotel"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/hotel_3"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="La Sinfonía del Rey Hotel"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/hotel_4"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="Apricot Hotel"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/hotel_5"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="Khách sạn The Chi Boutique"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
 
                     </LinearLayout>
                 </HorizontalScrollView>
@@ -599,162 +173,10 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:id="@+id/homestay"
+                        >
 
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/cuisine_2"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="Banh mi"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/cuisine_3"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="Banh mi"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/cuisine_4"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="Banh mi"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/cuisine_5"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="Banh mi"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:cardElevation="0dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-
-                                >
-
-                                <ImageView
-                                    android:layout_width="250dp"
-                                    android:layout_height="150dp"
-                                    android:layout_margin="10dp"
-                                    android:adjustViewBounds="true"
-                                    android:background="@drawable/cuisine_6"
-                                    android:scaleType="fitXY"
-
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:text="Banh mi"
-                                    android:textSize="10sp" />
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
 
                     </LinearLayout>
                 </HorizontalScrollView>
@@ -773,7 +195,11 @@
         app:itemIconSize="40dp"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/navigation_menu" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/navigation_menu"
+
+        />
 
     <View
         android:id="@+id/viewDivider"

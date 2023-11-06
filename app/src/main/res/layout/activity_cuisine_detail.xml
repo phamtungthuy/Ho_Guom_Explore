@@ -16,21 +16,24 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/titleField"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Ăn gì, ở đâu?"
             android:textSize="35sp"
-            android:textStyle="bold" />
+            android:textStyle="bold|italic"
+            android:padding="10dp"
+
+            />
 
 
 
     </LinearLayout>
 
     <ScrollView
-        android:layout_width="415dp"
-        android:layout_height="602dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header"
@@ -46,29 +49,32 @@
                 android:orientation="vertical"
                 >
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="250dp"
                     android:adjustViewBounds="true"
-                    android:background="@drawable/cuisine_2"
+                    android:id="@+id/image"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Bánh khúc Quận 35 Cầu Gỗ"
                     android:padding="10dp"
+                    android:id="@+id/title"
                     ></TextView>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingHorizontal="10dp"
+                android:paddingVertical="20dp"
+
                 >
 
                 <LinearLayout
-                    android:layout_width="250dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center_vertical"
                     >
@@ -76,7 +82,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="123">
+                        android:text="123"
+                        android:id="@+id/address"
+                        >
 
                     </TextView>
                 </LinearLayout>
@@ -117,12 +125,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Thông tin chi tiết"
+                    android:textStyle="bold"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
                     android:text="Something"
+                    android:id="@+id/description"
                     />
             </LinearLayout>
         </LinearLayout>
