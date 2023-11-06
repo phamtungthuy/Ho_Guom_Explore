@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-public class DetailActivity extends AppCompatActivity {
+public class UploadDetailActivity extends AppCompatActivity {
 
     TextView detailDesc, detailTitle;
     ImageView detailImage;
@@ -16,7 +16,7 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
+        setContentView(R.layout.activity_upload_detail);
 
         detailDesc = findViewById(R.id.detailDesc);
         detailImage = findViewById(R.id.detailImage);

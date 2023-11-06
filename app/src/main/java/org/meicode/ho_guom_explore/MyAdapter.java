@@ -2,7 +2,6 @@ package org.meicode.ho_guom_explore;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +10,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.helper.widget.Layer;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -45,7 +43,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
         holder.recCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, DetailActivity.class);
+                Intent intent = new Intent(context, UploadDetailActivity.class);
                 intent.putExtra("Image", dataList.get(holder.getAdapterPosition()).getDataImage());
                 intent.putExtra("Description", dataList.get(holder.getAdapterPosition()).getDataDescription());
                 intent.putExtra("Title", dataList.get(holder.getAdapterPosition()).getDataTitle());
