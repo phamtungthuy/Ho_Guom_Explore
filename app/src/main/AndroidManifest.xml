@@ -13,64 +13,67 @@
         android:theme="@style/Theme.Ho_Guom_Explore"
         tools:targetApi="31">
         <activity
-            android:name=".UploadDetailActivity"
+            android:name=".UserInterface.EventPage.EventDetail"
+            android:exported="true"/>
+        <activity
+            android:name=".ManageInterface.UploadDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".UploadCuisineAndAccommodation"
+            android:name=".ManageInterface.UploadCuisineAndAccommodation"
             android:exported="true" />
         <activity
-            android:name=".UploadActivity"
+            android:name=".ManageInterface.UploadActivity"
             android:exported="false" />
         <activity
-            android:name=".CommentActivity"
+            android:name=".UserInterface.SubPages.CommentActivity"
             android:exported="true" />
         <activity
-            android:name=".VisitActivity"
+            android:name=".UserInterface.VisitPage.VisitActivity"
             android:exported="true" />
         <activity
-            android:name=".VisitMapActivity"
+            android:name=".UserInterface.VisitPage.VisitMapActivity"
             android:exported="true" />
         <activity
-            android:name=".VisitDetailActivity"
+            android:name=".UserInterface.VisitPage.VisitDetailActivity"
             android:exported="true" />
         <activity
-            android:name=".DetailActivity"
+            android:name=".UserInterface.IntroductionPage.DetailActivity"
             android:exported="true" />
         <activity
-            android:name=".DetailVideoActivity"
+            android:name=".UserInterface.IntroductionPage.DetailVideoActivity"
             android:exported="true" />
         <activity
-            android:name=".InstructionActivity"
+            android:name=".UserInterface.IntroductionPage.InstructionActivity"
             android:exported="true" />
         <activity
-            android:name=".RestaurantList"
+            android:name=".UserInterface.CuisineAndAccommodationPage.RestaurantList"
             android:exported="true" />
         <activity
-            android:name=".HotelList"
+            android:name=".UserInterface.CuisineAndAccommodationPage.HotelList"
             android:exported="true" />
         <activity
-            android:name=".CuisineList"
+            android:name=".UserInterface.CuisineAndAccommodationPage.CuisineList"
             android:exported="true" />
         <activity
-            android:name=".HotelDetail"
+            android:name=".UserInterface.CuisineAndAccommodationPage.HotelDetail"
             android:exported="false" />
         <activity
-            android:name=".RestaurantDetail"
+            android:name=".UserInterface.CuisineAndAccommodationPage.RestaurantDetail"
             android:exported="false" />
         <activity
-            android:name=".CuisineDetail"
+            android:name=".UserInterface.CuisineAndAccommodationPage.CuisineDetail"
             android:exported="true" />
         <activity
-            android:name=".CuisineAndAccommodation"
+            android:name=".UserInterface.CuisineAndAccommodationPage.CuisineAndAccommodation"
             android:exported="true" />
         <activity
-            android:name=".HomePageActivity"
+            android:name=".UserInterface.MainPage.HomePageActivity"
             android:exported="true" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".UserInterface.AuthenticationPage.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".UserInterface.AuthenticationPage.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -79,7 +82,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".UserInterface.MainPage.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
