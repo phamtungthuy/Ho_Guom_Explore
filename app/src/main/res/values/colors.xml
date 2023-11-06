@@ -4,7 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorDevider">#DCDCDC</color>
     <color name="blue">#0866FF</color>
-
-
+    <color name="grey">#CCCCCC</color>
 
 </resources>
