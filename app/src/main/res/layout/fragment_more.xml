@@ -32,6 +32,8 @@
             app:layout_constraintTop_toBottomOf="@id/title" />
 
 
+
+
     </LinearLayout>
 
     <!--body-->
@@ -75,6 +77,48 @@
             android:drawableLeft="@drawable/ic_share"
             android:backgroundTint="@color/white"
             android:text="Chia sẻ ứng dụng"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textAlignment="viewStart"
+            />
+
+        <View
+            android:id="@+id/viewDivider3"
+            android:layout_marginStart="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDevider"
+            app:layout_constraintTop_toBottomOf="@id/button_information" />
+
+        <Button
+            android:id="@+id/upload_data"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10sp"
+            android:drawableLeft="@drawable/ic_upload"
+            android:backgroundTint="@color/white"
+            android:text="Tải lên dữ liệu"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textAlignment="viewStart"
+            />
+
+        <View
+            android:id="@+id/viewDivider4"
+            android:layout_marginStart="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorDevider"
+            app:layout_constraintTop_toBottomOf="@id/button_information" />
+
+        <Button
+            android:id="@+id/sign_out"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10sp"
+            android:drawableLeft="@drawable/ic_signout"
+            android:backgroundTint="@color/blue"
+            android:text="Đăng xuất"
             android:textColor="@color/black"
             android:textSize="30dp"
             android:textAlignment="viewStart"

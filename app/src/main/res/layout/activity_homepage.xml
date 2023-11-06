@@ -24,7 +24,7 @@
         android:background="@color/white"
         android:outlineProvider="bounds"
         app:backgroundTint="@color/white"
-        app:itemIconSize="40dp"
+        app:itemIconSize="45dp"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/navigation_menu" />
