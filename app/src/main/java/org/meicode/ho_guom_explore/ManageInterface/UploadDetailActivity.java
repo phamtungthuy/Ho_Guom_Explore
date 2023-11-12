@@ -33,9 +33,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class UploadDetailActivity extends AppCompatActivity {
 
-    TextView detailDesc, detailTitle;
+    TextView detailDesc, detailTitle, detailAddress;
     ImageView detailImage;
-    FloatingActionButton deleteButton;
+    FloatingActionButton deleteButton, editButton;
     String key ="";
     String imageUrl = "";
     String fieldName;
@@ -48,12 +48,15 @@ public class UploadDetailActivity extends AppCompatActivity {
         detailDesc = findViewById(R.id.detailDesc);
         detailImage = findViewById(R.id.detailImage);
         detailTitle = findViewById(R.id.detailTitle);
+        editButton = findViewById(R.id.editButton);
         deleteButton = findViewById(R.id.deleteButton);
+        detailAddress = findViewById(R.id.detailAddress);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             detailDesc.setText(bundle.getString("Description"));
             detailTitle.setText(bundle.getString("Title"));
+            detailAddress.setText(bundle.getString("Address"));
             key = bundle.getString("Key");
             imageUrl = bundle.getString("Image");
             fieldName = bundle.getString("Field Name");
@@ -80,6 +83,21 @@ public class UploadDetailActivity extends AppCompatActivity {
 
 
 
+            }
+        });
+
+        editButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UploadDetailActivity.this, UpdateActivity.class)
+                        .putExtra("Title", detailTitle.getText().toString())
+                        .putExtra("Description", detailDesc.getText().toString())
+                        .putExtra("Address", detailAddress.getText().toString())
+                        .putExtra("Image", imageUrl)
+                        .putExtra("Key", key)
+                        .putExtra("Field Name", fieldName);
+
+                startActivity(intent);
             }
         });
     }
