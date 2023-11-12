@@ -18,6 +18,15 @@
             android:name=".ManageInterface.UpdateActivity"
             android:exported="false" />
         <activity
+            android:name=".UserInterface.ServicePage.ServiceActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".UserInterface.EventPage.EventActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".UserInterface.SubPages.CommentActivity"
+            android:exported="true"/>
+        <activity
             android:name=".UserInterface.EventPage.EventDetail"
             android:exported="true" />
         <activity
