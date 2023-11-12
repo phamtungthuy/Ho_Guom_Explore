@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/firstContainer">
 
     <LinearLayout
         android:id="@+id/header"
@@ -23,10 +24,10 @@
             android:textSize="35sp"
             android:textStyle="bold" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/main_img"
             android:layout_width="match_parent"
-            android:layout_height="210dp"
+            android:layout_height="220dp"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
             android:src="@drawable/bg" />
@@ -128,7 +129,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="25dp">
+            android:layout_marginTop="15dp">
 
             <!--  giới thiệu Hồ Gươm  -->
             <LinearLayout
@@ -142,7 +143,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
+                <ImageButton
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:background="@drawable/ic_museum"
@@ -173,7 +174,7 @@
                 app:layout_constraintStart_toEndOf="@id/layoutProduce"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
+                <ImageButton
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:background="@drawable/ic_place"
@@ -203,7 +204,7 @@
                 app:layout_constraintStart_toStartOf="@id/layoutProduce"
                 app:layout_constraintTop_toBottomOf="@id/layoutProduce">
 
-                <ImageView
+                <ImageButton
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:background="@drawable/ic_calender"
@@ -234,7 +235,7 @@
                 app:layout_constraintStart_toEndOf="@id/layoutEvent"
                 app:layout_constraintTop_toTopOf="@id/layoutEvent">
 
-                <ImageView
+                <ImageButton
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:background="@drawable/ic_service"
@@ -264,7 +265,7 @@
                 app:layout_constraintStart_toStartOf="@id/layoutEvent"
                 app:layout_constraintTop_toBottomOf="@id/layoutEvent">
 
-                <ImageView
+                <ImageButton
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:contentDescription="@string/app_name"
@@ -295,7 +296,8 @@
                 app:layout_constraintStart_toEndOf="@id/layoutAccomodation"
                 app:layout_constraintTop_toTopOf="@id/layoutAccomodation">
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/btnComment"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:background="@drawable/ic_letter"

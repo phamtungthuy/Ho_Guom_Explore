@@ -126,7 +126,6 @@
         android:layout_marginTop="15dp"
         android:textColor="@color/white"
         android:textSize="15dp"
-        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/buttonRegister"
         />
 
