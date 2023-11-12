@@ -106,6 +106,8 @@ public class UploadCuisineAndAccommodation extends AppCompatActivity {
                 dataList.clear();
                 for (DataSnapshot itemSnapshot : snapshot.getChildren()) {
                     CuisineAndAccommodationDataClass dataClass = itemSnapshot.getValue(CuisineAndAccommodationDataClass.class);
+                    dataClass.setKey(itemSnapshot.getKey());
+                    dataClass.setFieldName(fieldName);
                     dataList.add(dataClass);
                 }
                 adapter.notifyDataSetChanged();

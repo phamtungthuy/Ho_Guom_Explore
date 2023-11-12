@@ -100,8 +100,9 @@ public class UploadActivity extends AppCompatActivity {
     }
 
     public void saveData() {
+        String fileName = System.currentTimeMillis() + "_" + uri.getLastPathSegment();
         StorageReference storageReference = FirebaseStorage.getInstance().getReference().child(dropdown.getSelectedItem().toString())
-                .child(uri.getLastPathSegment());
+                .child(fileName);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(UploadActivity.this);
         builder.setCancelable(false);
