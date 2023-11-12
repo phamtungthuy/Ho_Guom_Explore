@@ -39,9 +39,6 @@
             android:name=".ManageInterface.UploadActivity"
             android:exported="false" />
         <activity
-            android:name=".UserInterface.SubPages.CommentActivity"
-            android:exported="true" />
-        <activity
             android:name=".UserInterface.VisitPage.VisitActivity"
             android:exported="true" />
         <activity
