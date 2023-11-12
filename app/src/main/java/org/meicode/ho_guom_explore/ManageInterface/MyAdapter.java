@@ -16,6 +16,7 @@ import com.bumptech.glide.Glide;
 
 import org.meicode.ho_guom_explore.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
@@ -58,6 +59,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     @Override
     public int getItemCount() {
         return dataList.size();
+    }
+
+    public void searchDataList(ArrayList<CuisineAndAccommodationDataClass> searchList) {
+        dataList = searchList;
+        notifyDataSetChanged();
     }
 }
 
