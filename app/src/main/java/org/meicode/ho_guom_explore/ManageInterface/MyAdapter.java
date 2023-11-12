@@ -16,6 +16,7 @@ import com.bumptech.glide.Glide;
 
 import org.meicode.ho_guom_explore.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
@@ -49,6 +50,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
                 intent.putExtra("Image", dataList.get(holder.getAdapterPosition()).getDataImage());
                 intent.putExtra("Description", dataList.get(holder.getAdapterPosition()).getDataDescription());
                 intent.putExtra("Title", dataList.get(holder.getAdapterPosition()).getDataTitle());
+                intent.putExtra("Key", dataList.get(holder.getAdapterPosition()).getKey());
+                intent.putExtra("Field Name", dataList.get(holder.getAdapterPosition()).getFieldName());
+                intent.putExtra("Phone Number", dataList.get(holder.getAdapterPosition()).getDataPhoneNumber());
+                intent.putExtra("Address", dataList.get(holder.getAdapterPosition()).getDataAddress());
+                intent.putExtra("Website", dataList.get(holder.getAdapterPosition()).getDataWebsite());
+                intent.putExtra("Email", dataList.get(holder.getAdapterPosition()).getDataEmail());
 
                 context.startActivity(intent);
             }
@@ -58,6 +65,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     @Override
     public int getItemCount() {
         return dataList.size();
+    }
+
+    public void searchDataList(ArrayList<CuisineAndAccommodationDataClass> searchList) {
+        dataList = searchList;
+        notifyDataSetChanged();
     }
 }
 

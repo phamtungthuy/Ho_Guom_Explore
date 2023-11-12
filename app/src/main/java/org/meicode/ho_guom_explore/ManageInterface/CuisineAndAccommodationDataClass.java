@@ -8,6 +8,24 @@ public class CuisineAndAccommodationDataClass {
     private String dataPhoneNumber;
     private String dataWebsite;
     private String dataEmail;
+    private String key;
+    private String fieldName;
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public String getFieldName() {
+        return fieldName;
+    }
+
+    public void setFieldName(String fieldName) {
+        this.fieldName = fieldName;
+    }
 
     public String getDataTitle() {
         return dataTitle;

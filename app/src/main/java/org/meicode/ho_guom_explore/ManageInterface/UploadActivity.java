@@ -31,6 +31,9 @@ import com.google.firebase.storage.UploadTask;
 
 import org.meicode.ho_guom_explore.R;
 
+import java.text.DateFormat;
+import java.util.Calendar;
+
 public class UploadActivity extends AppCompatActivity {
 
     ImageView uploadImage;
@@ -100,8 +103,9 @@ public class UploadActivity extends AppCompatActivity {
     }
 
     public void saveData() {
+        String fileName = System.currentTimeMillis() + "_" + uri.getLastPathSegment();
         StorageReference storageReference = FirebaseStorage.getInstance().getReference().child(dropdown.getSelectedItem().toString())
-                .child(uri.getLastPathSegment());
+                .child(fileName);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(UploadActivity.this);
         builder.setCancelable(false);
@@ -141,8 +145,9 @@ public class UploadActivity extends AppCompatActivity {
         CuisineAndAccommodationDataClass dataClass = new CuisineAndAccommodationDataClass(title,
                 desc, address, imageURL, phoneNumber, website, email);
 
+        String currentDate = DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
 
-        FirebaseDatabase.getInstance().getReference(selectedField).child(title)
+        FirebaseDatabase.getInstance().getReference(selectedField).child(currentDate)
                 .setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

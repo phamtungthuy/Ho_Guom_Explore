@@ -3,6 +3,7 @@ package org.meicode.ho_guom_explore.ManageInterface;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -19,13 +20,20 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.meicode.ho_guom_explore.R;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class UploadCuisineAndAccommodation extends AppCompatActivity {
 
     FloatingActionButton fab;
-    RecyclerView recycleView, recycleView2, recycleView3, recyclerView4;
+    List<RecyclerView> recyclerViewList;
+    final List<String> fieldList = new ArrayList<String>(Arrays.asList("Cuisine", "Restaurant", "Hotel", "Homestay"));
+
+    List<MyAdapter> adapterList;
+    List<List<CuisineAndAccommodationDataClass>> dataLists;
+    SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +41,16 @@ public class UploadCuisineAndAccommodation extends AppCompatActivity {
         setContentView(R.layout.activity_upload_cuisine_and_accommodation);
 
         fab = findViewById(R.id.fab);
-        recycleView = findViewById(R.id.recycleView);
-        recycleView2 = findViewById(R.id.recycleView2);
-        recycleView3 = findViewById(R.id.recycleView3);
-        recyclerView4 = findViewById(R.id.recycleView4);
+        adapterList = new ArrayList<>();
+        dataLists = new ArrayList<>();
+        recyclerViewList = new ArrayList<>();
+        recyclerViewList.add(findViewById(R.id.recycleView));
+        recyclerViewList.add(findViewById(R.id.recycleView2));
+        recyclerViewList.add(findViewById(R.id.recycleView3));
+        recyclerViewList.add(findViewById(R.id.recycleView4));
+
+        searchView = findViewById(R.id.search);
+        searchView.clearFocus();
 
         AlertDialog.Builder builder = new AlertDialog.Builder(UploadCuisineAndAccommodation.this);
         builder.setCancelable(false);
@@ -44,10 +58,24 @@ public class UploadCuisineAndAccommodation extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
 
-        handleLoadData("Cuisine", dialog, recycleView);
-        handleLoadData("Restaurant", dialog, recycleView2);
-        handleLoadData("Hotel", dialog, recycleView3);
-        handleLoadData("Homestay", dialog, recyclerView4);
+        for(int i = 0; i < fieldList.size(); i++) {
+            dataLists.add(new ArrayList<CuisineAndAccommodationDataClass>());
+            adapterList.add(new MyAdapter(UploadCuisineAndAccommodation.this, dataLists.get(i)));
+            handleLoadData(i, dialog);
+        }
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                searchList(newText);
+                return true;
+            }
+        });
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,12 +87,15 @@ public class UploadCuisineAndAccommodation extends AppCompatActivity {
 
     }
 
-    private void handleLoadData(String fieldName, AlertDialog dialog, RecyclerView recView) {
+    private void handleLoadData(int index, AlertDialog dialog) {
+        RecyclerView recyclerView = recyclerViewList.get(index);
+        final MyAdapter adapter = adapterList.get(index);
+        String fieldName = fieldList.get(index);
+        List<CuisineAndAccommodationDataClass> dataList = dataLists.get(index);
+
         GridLayoutManager gridLayoutManager = new GridLayoutManager(UploadCuisineAndAccommodation.this, 1);
-        recView.setLayoutManager(gridLayoutManager);
-        List<CuisineAndAccommodationDataClass> dataList = new ArrayList<>();
-        MyAdapter adapter = new MyAdapter(UploadCuisineAndAccommodation.this, dataList);
-        recView.setAdapter(adapter);
+        recyclerView.setLayoutManager(gridLayoutManager);
+        recyclerView.setAdapter(adapter);
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference(fieldName);
         dialog.show();
 
@@ -75,6 +106,8 @@ public class UploadCuisineAndAccommodation extends AppCompatActivity {
                 dataList.clear();
                 for (DataSnapshot itemSnapshot : snapshot.getChildren()) {
                     CuisineAndAccommodationDataClass dataClass = itemSnapshot.getValue(CuisineAndAccommodationDataClass.class);
+                    dataClass.setKey(itemSnapshot.getKey());
+                    dataClass.setFieldName(fieldName);
                     dataList.add(dataClass);
                 }
                 adapter.notifyDataSetChanged();
@@ -86,6 +119,22 @@ public class UploadCuisineAndAccommodation extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+    }
+
+    public void searchList(String text) {
+        for(int i = 0; i < fieldList.size(); i++) {
+            List<CuisineAndAccommodationDataClass> dataList = dataLists.get(i);
+            MyAdapter adapter = adapterList.get(i);
+            ArrayList<CuisineAndAccommodationDataClass> searchList = new ArrayList<>();
+            for (CuisineAndAccommodationDataClass dataClass : dataList) {
+                if (dataClass.getDataTitle().toLowerCase().contains(text.toLowerCase())) {
+                    searchList.add(dataClass);
+                }
+            }
+            adapter.searchDataList(searchList);
+        }
+
+
     }
 }
 
