@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/firstContainer"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/firstContainer">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/header"
@@ -18,19 +18,41 @@
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:gravity="center"
             android:text="HO GUOM"
             android:textSize="35sp"
             android:textStyle="bold" />
 
-        <ImageButton
-            android:id="@+id/main_img"
+        <ViewFlipper
             android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/bg" />
+            android:layout_height="250dp"
+            android:flipInterval="3000"
+            android:autoStart="true"
+            android:inAnimation="@android:anim/slide_in_left"
+            android:outAnimation="@android:anim/slide_out_right">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/hoguom2" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/hoguom1" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/hoguom3" />
+        </ViewFlipper>
+
 
     </LinearLayout>
 
@@ -123,20 +145,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header"
         app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="0dp">
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
 
-            android:layout_marginTop="15dp">
 
             <!--  giới thiệu Hồ Gươm  -->
             <LinearLayout
                 android:id="@+id/layoutProduce"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="5dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
@@ -145,8 +167,8 @@
 
                 <ImageButton
                     android:id="@+id/btnIntroduction"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:background="@drawable/ic_museum"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
@@ -168,7 +190,7 @@
                 android:id="@+id/layoutLocation"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
+                android:layout_marginLeft="10dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
@@ -177,8 +199,8 @@
 
                 <ImageButton
                     android:id="@+id/btnVisit"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:background="@drawable/ic_place"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
@@ -199,17 +221,18 @@
             <LinearLayout
                 android:id="@+id/layoutEvent"
                 android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
-                app:layout_constraintStart_toStartOf="@id/layoutProduce"
-                app:layout_constraintTop_toBottomOf="@id/layoutProduce">
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/layoutLocation">
 
                 <ImageButton
                     android:id="@+id/btnEvent"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:background="@drawable/ic_calender"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
@@ -231,17 +254,18 @@
                 android:id="@+id/layoutService"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
-                app:layout_constraintStart_toEndOf="@id/layoutEvent"
-                app:layout_constraintTop_toTopOf="@id/layoutEvent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutProduce">
 
                 <ImageButton
                     android:id="@+id/btnService"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:background="@drawable/ic_service"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
@@ -260,22 +284,24 @@
 
             <!-- ẩm thực và lưu trú  -->
             <LinearLayout
-                android:id="@+id/layoutAccomodation"
+                android:id="@+id/layoutAccommodation"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
-                app:layout_constraintStart_toStartOf="@id/layoutEvent"
-                app:layout_constraintTop_toBottomOf="@id/layoutEvent">
+                app:layout_constraintStart_toEndOf="@id/layoutService"
+                app:layout_constraintTop_toBottomOf="@id/layoutLocation">
 
                 <ImageButton
                     android:id="@+id/btnCuisineAndAccommodation"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/ic_accomodation"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:background="@drawable/ic_accomodation"
                     android:src="@drawable/button_round" />
 
                 <TextView
@@ -294,17 +320,18 @@
                 android:id="@+id/layoutFeedback"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="37dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
-                app:layout_constraintStart_toEndOf="@id/layoutAccomodation"
-                app:layout_constraintTop_toTopOf="@id/layoutAccomodation">
+                app:layout_constraintStart_toEndOf="@id/layoutAccommodation"
+                app:layout_constraintTop_toBottomOf="@id/layoutEvent">
 
                 <ImageButton
                     android:id="@+id/btnComment"
-                    android:layout_width="125dp"
-                    android:layout_height="125dp"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:background="@drawable/ic_letter"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
@@ -326,31 +353,31 @@
     </ScrollView>
 
     <!--    <FrameLayout-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:id="@+id/container"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        android:layout_above="@id/bottomNavigationView"/>-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:id="@+id/container"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        android:layout_above="@id/bottomNavigationView"/>-->
 
-<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:id="@+id/bottomNavigationView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="@color/white"-->
-<!--        android:outlineProvider="bounds"-->
-<!--        app:backgroundTint="@color/white"-->
-<!--        app:itemIconSize="40dp"-->
-<!--        app:labelVisibilityMode="labeled"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:menu="@menu/navigation_menu" />-->
+    <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+    <!--        android:id="@+id/bottomNavigationView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@color/white"-->
+    <!--        android:outlineProvider="bounds"-->
+    <!--        app:backgroundTint="@color/white"-->
+    <!--        app:itemIconSize="40dp"-->
+    <!--        app:labelVisibilityMode="labeled"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:menu="@menu/navigation_menu" />-->
 
-<!--    <View-->
-<!--        android:id="@+id/viewDivider"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="1dp"-->
-<!--        android:background="@color/colorDevider"-->
-<!--        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView" />-->
+    <!--    <View-->
+    <!--        android:id="@+id/viewDivider"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:background="@color/colorDevider"-->
+    <!--        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
