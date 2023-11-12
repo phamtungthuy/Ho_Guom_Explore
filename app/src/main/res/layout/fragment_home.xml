@@ -144,6 +144,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageButton
+                    android:id="@+id/btnIntroduction"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:background="@drawable/ic_museum"
@@ -175,6 +176,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageButton
+                    android:id="@+id/btnVisit"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:background="@drawable/ic_place"
@@ -205,6 +207,7 @@
                 app:layout_constraintTop_toBottomOf="@id/layoutProduce">
 
                 <ImageButton
+                    android:id="@+id/btnEvent"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:background="@drawable/ic_calender"
@@ -236,6 +239,7 @@
                 app:layout_constraintTop_toTopOf="@id/layoutEvent">
 
                 <ImageButton
+                    android:id="@+id/btnService"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:background="@drawable/ic_service"
@@ -266,6 +270,7 @@
                 app:layout_constraintTop_toBottomOf="@id/layoutEvent">
 
                 <ImageButton
+                    android:id="@+id/btnCuisineAndAccommodation"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:contentDescription="@string/app_name"

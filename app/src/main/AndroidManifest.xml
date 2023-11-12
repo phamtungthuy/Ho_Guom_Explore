@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Ho_Guom_Explore"
         tools:targetApi="31">
         <activity
+            android:name=".UserInterface.ServicePage.ServiceActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".UserInterface.EventPage.EventActivity"
+            android:exported="true"/>
+        <activity
             android:name=".UserInterface.SubPages.CommentActivity"
             android:exported="true"/>
         <activity
