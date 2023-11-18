@@ -83,6 +83,8 @@
                 android:layout_height="wrap_content"
                 android:text="  Hồ Hoàn Kiếm còn được gọi là Hồ Gươm là một hồ nước ngọt tự nhiên nằm ở trung tâm thành phố Hà Nội. Hồ có diện tích khoảng 12 ha. Trước kia, hồ còn có các tên gọi là hồ Lục Thủy, hồ Thủy Quân, hồ Tả Vọng và Hữu Vọng."
                 android:textSize="20sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
