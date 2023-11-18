@@ -84,21 +84,22 @@
         app:layout_constraintVertical_bias="1.0">
 
 
-        <TextView
-            android:id="@+id/textView4"
+        <EditText
+            android:id="@+id/commentBox"
             android:layout_width="350dp"
             android:layout_height="450dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/border"
             android:gravity="center"
-            android:text="Ứng dụng rất tuyệt vời !!!"
             android:textSize="20sp"
+            android:hint="Enter Your Comment"
+            android:inputType="textCapSentences|textMultiLine"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonSendComment"
             android:layout_width="200dp"
             android:layout_height="0dp"
             android:backgroundTint="#607D8B"
@@ -108,7 +109,7 @@
             android:layout_marginTop="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            app:layout_constraintTop_toBottomOf="@+id/commentBox" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
