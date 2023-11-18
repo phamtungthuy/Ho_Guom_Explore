@@ -4,11 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -20,25 +22,38 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.meicode.ho_guom_explore.ManageInterface.UploadActivity;
 import org.meicode.ho_guom_explore.R;
 import org.meicode.ho_guom_explore.ManageInterface.CuisineAndAccommodationDataClass;
+import org.meicode.ho_guom_explore.UserInterface.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CuisineAndAccommodation extends AppCompatActivity {
+public class CuisineAndAccommodation extends BaseActivity {
 
-
-
+    AlertDialog dialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cuisine_and_accommodation);
 
+        handleBackPressed(findViewById(R.id.back));
+
+        handleNavigationBar(findViewById(R.id.bottomNavigationView));
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(CuisineAndAccommodation.this);
+        builder.setCancelable(false);
+        builder.setView(R.layout.progress_layout);
+        dialog = builder.create();
+        dialog.show();
+
         addListenerToDatabaseReference("Cuisine");
         addListenerToDatabaseReference("Restaurant");
         addListenerToDatabaseReference("Hotel");
         addListenerToDatabaseReference("Homestay");
+
+
     }
 
     private void addListenerToDatabaseReference(String fieldName) {
@@ -54,6 +69,9 @@ public class CuisineAndAccommodation extends AppCompatActivity {
 
                 // Sau khi lấy dữ liệu xong, cập nhật giao diện
                 updateUIWithCuisineData(cuisineAndAcommodationList, fieldName);
+                if(fieldName.equals("Homestay")) {
+                    dialog.dismiss();
+                }
             }
 
             @Override
