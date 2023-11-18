@@ -31,7 +31,34 @@ public class HomePageActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         // first fragment when open app
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
+        String id = getIntent().getStringExtra("id");
+        if (id != null && !id.equals("home")) {
+            if(id.equals("notification")) {
+                bottomNavigationView.setSelectedItemId(R.id.menuNotification);
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, notificationFragment).commit();
+            } else if(id.equals("more")) {
+                bottomNavigationView.setSelectedItemId(R.id.menuMore);
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, moreFragment).commit();
+
+            } else if (id.equals("map")) {
+                bottomNavigationView.setSelectedItemId(R.id.menuMap);
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, mapFragment).commit();
+
+            } else if (id.equals("contact")) {
+                bottomNavigationView.setSelectedItemId(R.id.menuContact);
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, contactFragment).commit();
+
+            } else {
+                bottomNavigationView.setSelectedItemId(R.id.menuHome);
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
+
+            }
+        } else {
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit();
+
+        }
+
+
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
 

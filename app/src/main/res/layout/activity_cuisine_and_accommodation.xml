@@ -7,15 +7,27 @@
     android:orientation="vertical"
     tools:context=".UserInterface.CuisineAndAccommodationPage.CuisineAndAccommodation">
 
-    <LinearLayout
-        android:id="@+id/header"
-        android:layout_width="0dp"
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/header"
         >
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+            android:background="@android:color/transparent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            />
+
 
         <TextView
             android:id="@+id/title"
@@ -25,7 +37,28 @@
             android:text="Ăn gì, ở đâu?"
             android:textSize="35sp"
             android:textStyle="bold" />
-    </LinearLayout>
+
+    </RelativeLayout>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/header"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        >-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/title"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Ăn gì, ở đâu?"-->
+<!--            android:textSize="35sp"-->
+<!--            android:textStyle="bold" />-->
+<!--    </LinearLayout>-->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
