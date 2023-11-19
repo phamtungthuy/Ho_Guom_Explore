@@ -18,7 +18,7 @@
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
             android:gravity="center"
             android:text="Các chức năng khác"
             android:textSize="35sp"
@@ -58,11 +58,11 @@
             android:text="Thông tin ứng dụng"
             android:textAlignment="viewStart"
             android:textColor="@color/black"
-            android:textSize="30dp" />
+            android:textSize="20dp" />
 
         <View
             android:id="@+id/viewDivider2"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="20dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/colorDevider"
@@ -77,13 +77,13 @@
             android:backgroundTint="@color/white"
             android:text="Chia sẻ ứng dụng"
             android:textColor="@color/black"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textAlignment="viewStart"
             />
 
         <View
             android:id="@+id/viewDivider3"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="20dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/colorDevider"
@@ -98,13 +98,13 @@
             android:backgroundTint="@color/white"
             android:text="Tải lên dữ liệu"
             android:textColor="@color/black"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textAlignment="viewStart"
             />
 
         <View
             android:id="@+id/viewDivider4"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="20dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/colorDevider"
@@ -119,7 +119,7 @@
             android:backgroundTint="@color/blue"
             android:text="Đăng xuất"
             android:textColor="@color/black"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textAlignment="viewStart"
             />
 
