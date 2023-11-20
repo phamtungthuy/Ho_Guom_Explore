@@ -14,12 +14,13 @@
         android:layout_weight="1"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/categories">
+        >
 
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
             android:text="HỒ GƯƠM"
             android:textSize="35sp"
@@ -146,13 +147,14 @@
         android:id="@+id/categories"
         app:layout_constraintBottom_toBottomOf="parent"
         >
+
         <LinearLayout
-            android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_weight="3"
             android:orientation="horizontal"
-            android:layout_gravity="center_horizontal"
-
+            android:layout_marginTop="10dp"
             >
             <!--  giới thiệu Hồ Gươm  -->
             <LinearLayout
@@ -160,8 +162,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:gravity="center"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
                 app:layout_constraintStart_toStartOf="parent"
@@ -169,11 +171,11 @@
 
                 <ImageButton
                     android:id="@+id/btnIntroduction"
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
                     android:background="@drawable/ic_museum"
                     android:contentDescription="@string/app_name"
-                    android:padding="8dp"
+                    android:padding="10dp"
                     android:src="@drawable/button_round" />
 
                 <TextView
@@ -192,8 +194,8 @@
                 android:id="@+id/layoutLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginLeft="10dp"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
@@ -202,8 +204,8 @@
 
                 <ImageButton
                     android:id="@+id/btnVisit"
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
                     android:background="@drawable/ic_place"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
@@ -224,19 +226,19 @@
             <LinearLayout
                 android:id="@+id/layoutEvent"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical"
                 app:layout_constraintDimensionRatio="H,1:1"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@id/layoutLocation">
+                app:layout_constraintStart_toEndOf="@id/layoutLocation"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <ImageButton
                     android:id="@+id/btnEvent"
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
                     android:background="@drawable/ic_calender"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
@@ -259,7 +261,7 @@
             android:layout_weight="3"
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="20dp">
             <!-- dịch vụ  -->
             <LinearLayout
                 android:id="@+id/layoutService"
@@ -275,8 +277,8 @@
 
                 <ImageButton
                     android:id="@+id/btnService"
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
                     android:background="@drawable/ic_service"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
@@ -308,8 +310,8 @@
 
                 <ImageButton
                     android:id="@+id/btnCuisineAndAccommodation"
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
                     android:background="@drawable/ic_accomodation"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
@@ -341,8 +343,8 @@
 
                 <ImageButton
                     android:id="@+id/btnComment"
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
                     android:background="@drawable/ic_letter"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
