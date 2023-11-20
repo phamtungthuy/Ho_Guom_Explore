@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserInterface.CuisineAndAccommodationPage.RestaurantList">
+    tools:context=".UserInterface.EventPage.EventActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,18 +15,25 @@
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageButton
+            android:id="@+id/dt_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="?attr/homeAsUpIndicator" />
+
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/dt_title"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_centerInParent="true"
             android:gravity="center"
             android:text="Sự kiện trong tuần"
-            android:textSize="35sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
-
-
-    </LinearLayout>
+    </RelativeLayout>
 
 
     <ScrollView
@@ -63,20 +70,22 @@
                         app:cardCornerRadius="5dp">
 
                         <ImageView
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
                             android:adjustViewBounds="true"
-                            android:layout_marginTop="10dp"
                             android:background="@drawable/event_1"
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:gravity="center_horizontal"
-                        android:text="Sinh hoạt CLB Cờ Hồ Gươm" />
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.5"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:text="Sinh hoạt CLB Cờ Hồ Gươm"/>
                 </LinearLayout>
 
                 <View
@@ -98,18 +107,21 @@
                         app:cardCornerRadius="5dp">
 
                         <ImageView
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
+                            android:layout_width="120dp"
+                            android:layout_height="105dp"
                             android:adjustViewBounds="true"
                             android:background="@drawable/event_2"
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.5"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
                         android:text="Biểu diễn các trích đoạn vở diễn, kịch ngắn" />
                 </LinearLayout>
 
@@ -132,18 +144,21 @@
                         app:cardCornerRadius="5dp">
 
                         <ImageView
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
                             android:adjustViewBounds="true"
                             android:background="@drawable/event_3"
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.5"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
                         android:text="Trò chơi dân gian" />
                 </LinearLayout>
 
@@ -166,18 +181,21 @@
                         app:cardCornerRadius="5dp">
 
                         <ImageView
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
                             android:adjustViewBounds="true"
                             android:background="@drawable/event_4"
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.5"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
                         android:text="Trò chơi thông minh" />
                 </LinearLayout>
 
@@ -200,18 +218,21 @@
                         app:cardCornerRadius="5dp">
 
                         <ImageView
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
                             android:adjustViewBounds="true"
                             android:background="@drawable/event_5"
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.5"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
                         android:text="Các cửa hàng sách" />
                 </LinearLayout>
 
@@ -234,18 +255,21 @@
                         app:cardCornerRadius="5dp">
 
                         <ImageView
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
                             android:adjustViewBounds="true"
                             android:background="@drawable/event_6"
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.5"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
                         android:text="Biểu diễn hát xẩm, hát dân gian, chèo" />
                 </LinearLayout>
 
@@ -268,18 +292,21 @@
                         app:cardCornerRadius="5dp">
 
                         <ImageView
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
                             android:adjustViewBounds="true"
                             android:background="@drawable/event_7"
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.5"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
                         android:text="Biểu diễn ca nhạc, rối" />
                 </LinearLayout>
 
@@ -302,18 +329,21 @@
                         app:cardCornerRadius="5dp">
 
                         <ImageView
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
                             android:adjustViewBounds="true"
                             android:background="@drawable/event_8"
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.5"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
                         android:text="Chương trình nghệ thuật truyền thống" />
                 </LinearLayout>
 
@@ -336,18 +366,21 @@
                         app:cardCornerRadius="5dp">
 
                         <ImageView
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
                             android:adjustViewBounds="true"
                             android:background="@drawable/event_9"
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.5"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
                         android:text="Chương trình nghệ thuật truyền thống kiểu mới" />
                 </LinearLayout>
 
@@ -370,20 +403,29 @@
                         app:cardCornerRadius="5dp">
 
                         <ImageView
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
                             android:adjustViewBounds="true"
                             android:background="@drawable/event_10"
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.5"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
                         android:text="Biểu diễn âm nhạc truyền thống" />
+
                 </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp" />
 
             </LinearLayout>
         </LinearLayout>
