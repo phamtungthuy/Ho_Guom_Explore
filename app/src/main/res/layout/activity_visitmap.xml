@@ -14,14 +14,6 @@
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/vs_back_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:background="?android:attr/selectableItemBackground"
-            android:src="?attr/homeAsUpIndicator" />
-
         <TextView
             android:id="@+id/dt_title"
             android:layout_width="match_parent"
@@ -31,6 +23,14 @@
             android:text="Địa điểm tham quan"
             android:textSize="24sp"
             android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/vs_back_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="?attr/homeAsUpIndicator" />
 
     </RelativeLayout>
 

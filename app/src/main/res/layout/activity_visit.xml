@@ -14,14 +14,6 @@
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/vs_back_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:background="?android:attr/selectableItemBackground"
-            android:src="?attr/homeAsUpIndicator" />
-
         <TextView
             android:id="@+id/dt_title"
             android:layout_width="match_parent"
@@ -33,12 +25,20 @@
             android:textStyle="bold" />
 
         <ImageButton
+            android:id="@+id/vs_back_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="?attr/homeAsUpIndicator" />
+
+        <ImageButton
             android:id="@+id/vs_map_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_alignParentEnd="true"
             android:background="?android:attr/selectableItemBackground"
-            android:src="@android:drawable/ic_menu_mapmode"
+            android:src="@drawable/ic_map"
             tools:src="@drawable/ic_map" />
     </RelativeLayout>
 
@@ -81,17 +81,21 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1.5"
                     android:text="Cầu Thê Húc"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
                     android:textSize="24sp"
                     android:textStyle="bold"/>
 
                 <ImageButton
                     android:id="@+id/imageButton1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="0.2"
                     android:background="#00FFFFFF"
-                    android:src="@android:drawable/btn_star"
+                    android:src="@drawable/ic_more"
                     tools:src="@drawable/ic_more" />
             </LinearLayout>
 
@@ -120,17 +124,22 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1.5"
                     android:text="Đền Ngọc Sơn"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
                     android:textSize="24sp"
                     android:textStyle="bold"/>
 
                 <ImageButton
                     android:id="@+id/imageButton2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="0.2"
                     android:background="#00FFFFFF"
-                    android:src="@drawable/ic_more" />
+                    android:src="@drawable/ic_more"
+                    tools:src="@drawable/ic_more" />
             </LinearLayout>
 
             <LinearLayout
@@ -158,17 +167,22 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1.5"
                     android:text="Tháp Rùa"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
                     android:textSize="24sp"
                     android:textStyle="bold"/>
 
                 <ImageButton
                     android:id="@+id/imageButton3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="0.2"
                     android:background="#00FFFFFF"
-                    android:src="@drawable/ic_more" />
+                    android:src="@drawable/ic_more"
+                    tools:src="@drawable/ic_more" />
             </LinearLayout>
 
             <LinearLayout
@@ -196,17 +210,21 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1.5"
                     android:text="Tháp Bút"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
                     android:textSize="24sp"
                     android:textStyle="bold"/>
 
                 <ImageButton
                     android:id="@+id/imageButton4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="0.2"
                     android:background="#FFFFFF"
-                    android:src="@android:drawable/btn_star"
+                    android:src="@drawable/ic_more"
                     tools:src="@drawable/ic_more" />
             </LinearLayout>
 
@@ -235,17 +253,21 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1.5"
                     android:text="Tượng đài Lý Thái Tổ"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
                     android:textSize="24sp"
                     android:textStyle="bold"/>
 
                 <ImageButton
                     android:id="@+id/imageButton5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="0.2"
                     android:background="#00FFFFFF"
-                    android:src="@android:drawable/btn_star"
+                    android:src="@drawable/ic_more"
                     tools:src="@drawable/ic_more" />
             </LinearLayout>
 
@@ -274,17 +296,21 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1.5"
                     android:text="Nhà hát múa rối Thăng Long"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
                     android:textSize="24sp"
                     android:textStyle="bold"/>
 
                 <ImageButton
                     android:id="@+id/imageButton6"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="0.2"
                     android:background="#00FFFFFF"
-                    android:src="@android:drawable/btn_star"
+                    android:src="@drawable/ic_more"
                     tools:src="@drawable/ic_more" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

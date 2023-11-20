@@ -37,6 +37,13 @@ public class VisitActivity extends AppCompatActivity {
             }
         });
 
+        ImageButton infoButton1 = findViewById(R.id.imageButton1);
+        ImageButton infoButton2 = findViewById(R.id.imageButton2);
+        ImageButton infoButton3 = findViewById(R.id.imageButton3);
+        ImageButton infoButton4 = findViewById(R.id.imageButton4);
+        ImageButton infoButton5 = findViewById(R.id.imageButton5);
+        ImageButton infoButton6 = findViewById(R.id.imageButton6);
+
         View.OnClickListener infoClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,5 +68,13 @@ public class VisitActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         };
-    }
+
+        infoButton1.setOnClickListener(infoClickListener);
+        infoButton2.setOnClickListener(infoClickListener);
+        infoButton3.setOnClickListener(infoClickListener);
+        infoButton4.setOnClickListener(infoClickListener);
+        infoButton5.setOnClickListener(infoClickListener);
+        infoButton6.setOnClickListener(infoClickListener);
+
+        };
 }
