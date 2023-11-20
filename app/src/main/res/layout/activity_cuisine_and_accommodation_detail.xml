@@ -4,33 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserInterface.CuisineAndAccommodationPage.HotelDetail">
+    tools:context=".UserInterface.CuisineAndAccommodationPage.CuisineAndAccommodationDetail">
 
-    <LinearLayout
-        android:id="@+id/header"
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/header"
+        >
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+            android:background="@android:color/transparent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            />
+
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/titleField"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Ăn gì, ở đâu?"
-            android:textSize="35sp"
-            android:textStyle="bold" />
+            android:textSize="25sp"
+            android:textStyle="bold|italic"
+            android:padding="10dp"
+            android:layout_toEndOf="@+id/back"
+            />
 
-
-
-    </LinearLayout>
+    </RelativeLayout>
 
     <ScrollView
-        android:layout_width="415dp"
-        android:layout_height="602dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header"
@@ -46,29 +60,32 @@
                 android:orientation="vertical"
                 >
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="250dp"
                     android:adjustViewBounds="true"
-                    android:background="@drawable/hotel_1"
+                    android:id="@+id/image"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Bánh khúc Quận 35 Cầu Gỗ"
                     android:padding="10dp"
+                    android:id="@+id/title"
                     ></TextView>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingHorizontal="10dp"
+                android:paddingVertical="20dp"
+
                 >
 
                 <LinearLayout
-                    android:layout_width="250dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center_vertical"
                     >
@@ -76,7 +93,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="123">
+                        android:text="123"
+                        android:id="@+id/address"
+                        >
 
                     </TextView>
                 </LinearLayout>
@@ -94,7 +113,7 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/ic_map"
-                        android:layout_marginEnd="8dp"/>
+                    android:layout_marginEnd="8dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -117,12 +136,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Thông tin chi tiết"
+                    android:textStyle="bold"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
                     android:text="Something"
+                    android:id="@+id/description"
                     />
             </LinearLayout>
         </LinearLayout>
