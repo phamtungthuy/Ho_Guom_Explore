@@ -15,9 +15,10 @@ import com.bumptech.glide.Glide;
 
 import org.meicode.ho_guom_explore.R;
 import org.meicode.ho_guom_explore.ManageInterface.CuisineAndAccommodationDataClass;
+import org.meicode.ho_guom_explore.UserInterface.BaseActivity;
 
 
-public class CuisineDetail extends AppCompatActivity {
+public class CuisineAndAccommodationDetail extends BaseActivity {
 
     LinearLayout map;
     CuisineAndAccommodationDataClass data;
@@ -28,7 +29,7 @@ public class CuisineDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cuisine_detail);
+        setContentView(R.layout.activity_cuisine_and_accommodation_detail);
         map = findViewById(R.id.map);
         imageBackground = findViewById(R.id.image);
         title = findViewById(R.id.title);
@@ -43,6 +44,8 @@ public class CuisineDetail extends AppCompatActivity {
         String dataPhoneNumber = getIntent().getStringExtra("phoneNumber");
         String dataWebsite = getIntent().getStringExtra("website");
         String dataEmail = getIntent().getStringExtra("email");
+
+        handleBackPressed(findViewById(R.id.back));
 
         map.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +70,7 @@ public class CuisineDetail extends AppCompatActivity {
         address.setText(dataAddress);
 
 
-        Glide.with(CuisineDetail.this).load(dataImage).into(imageBackground);
+        Glide.with(CuisineAndAccommodationDetail.this).load(dataImage).into(imageBackground);
 
     }
 }

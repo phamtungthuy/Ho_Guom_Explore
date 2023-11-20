@@ -60,22 +60,10 @@
             android:name=".UserInterface.IntroductionPage.InstructionActivity"
             android:exported="true" />
         <activity
-            android:name=".UserInterface.CuisineAndAccommodationPage.RestaurantList"
+            android:name=".UserInterface.CuisineAndAccommodationPage.CuisineAndAccommodationList"
             android:exported="true" />
         <activity
-            android:name=".UserInterface.CuisineAndAccommodationPage.HotelList"
-            android:exported="true" />
-        <activity
-            android:name=".UserInterface.CuisineAndAccommodationPage.CuisineList"
-            android:exported="true" />
-        <activity
-            android:name=".UserInterface.CuisineAndAccommodationPage.HotelDetail"
-            android:exported="false" />
-        <activity
-            android:name=".UserInterface.CuisineAndAccommodationPage.RestaurantDetail"
-            android:exported="false" />
-        <activity
-            android:name=".UserInterface.CuisineAndAccommodationPage.CuisineDetail"
+            android:name=".UserInterface.CuisineAndAccommodationPage.CuisineAndAccommodationDetail"
             android:exported="true" />
         <activity
             android:name=".UserInterface.CuisineAndAccommodationPage.CuisineAndAccommodation"

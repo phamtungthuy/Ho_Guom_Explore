@@ -1,7 +1,6 @@
 package org.meicode.ho_guom_explore.UserInterface.CuisineAndAccommodationPage;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.app.AlertDialog;
@@ -23,7 +22,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import org.meicode.ho_guom_explore.ManageInterface.UploadActivity;
 import org.meicode.ho_guom_explore.R;
 import org.meicode.ho_guom_explore.ManageInterface.CuisineAndAccommodationDataClass;
 import org.meicode.ho_guom_explore.UserInterface.BaseActivity;
@@ -54,7 +52,10 @@ public class CuisineAndAccommodation extends BaseActivity {
         addListenerToDatabaseReference("Hotel");
         addListenerToDatabaseReference("Homestay");
 
-
+        handleClickForwardButton(R.id.cuisine_list, "Cuisine");
+        handleClickForwardButton(R.id.restaurant_list, "Restaurant");
+        handleClickForwardButton(R.id.hotel_list, "Hotel");
+        handleClickForwardButton(R.id.homestay_list, "Homestay");
     }
 
     private void addListenerToDatabaseReference(String fieldName) {
@@ -148,7 +149,7 @@ public class CuisineAndAccommodation extends BaseActivity {
             cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(CuisineAndAccommodation.this, CuisineDetail.class);
+                    Intent intent = new Intent(CuisineAndAccommodation.this, CuisineAndAccommodationDetail.class);
                     intent.putExtra("title", cuisineData.getDataTitle());
                     intent.putExtra("description", cuisineData.getDataDescription());
                     intent.putExtra("address", cuisineData.getDataAddress());
@@ -164,6 +165,19 @@ public class CuisineAndAccommodation extends BaseActivity {
             horizontalLayout.addView(cardView);
 
         }
+    }
+
+    public void handleClickForwardButton(int id, String fieldName) {
+        ImageButton button = findViewById(id);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CuisineAndAccommodation.this, CuisineAndAccommodationList.class);
+                intent.putExtra("fieldName", fieldName);
+                startActivity(intent);
+            }
+        });
+
     }
 
 }
