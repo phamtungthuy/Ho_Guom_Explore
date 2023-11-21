@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -103,7 +104,6 @@ public class CuisineAndAccommodationList extends BaseActivity {
                     LinearLayout.LayoutParams.WRAP_CONTENT
             ));
             cardView.setCardElevation(0);
-
             LinearLayout cardLayout = new LinearLayout(this);
             cardLayout.setOrientation(LinearLayout.VERTICAL);
             cardLayout.setLayoutParams(new LinearLayout.LayoutParams(
@@ -129,7 +129,6 @@ public class CuisineAndAccommodationList extends BaseActivity {
             textView.setPadding(marginInDp, 0, 0, 0); // Thiết lập margin bằng cách đặt giá trị padding
             textView.setText(data.getDataTitle());
             textView.setTextSize(10);
-
             cardLayout.addView(imageView);
             cardLayout.addView(textView);
 
@@ -189,7 +188,7 @@ public class CuisineAndAccommodationList extends BaseActivity {
                     LinearLayout.LayoutParams.WRAP_CONTENT
             ));
             cardView.setCardElevation(0);
-
+            cardView.setBackgroundColor(Color.TRANSPARENT);
 
             LinearLayout cardLayout = new LinearLayout(this);
             cardLayout.setOrientation(LinearLayout.VERTICAL);

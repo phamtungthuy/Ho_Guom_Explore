@@ -5,6 +5,7 @@ import androidx.cardview.widget.CardView;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.View;
@@ -108,6 +109,7 @@ public class CuisineAndAccommodation extends BaseActivity {
                     LinearLayout.LayoutParams.WRAP_CONTENT
             ));
             cardView.setCardElevation(0);
+            cardView.setBackgroundColor(Color.TRANSPARENT);
 
             LinearLayout cardLayout = new LinearLayout(this);
             cardLayout.setOrientation(LinearLayout.VERTICAL);
