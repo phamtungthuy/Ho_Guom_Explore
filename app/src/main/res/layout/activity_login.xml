@@ -16,7 +16,7 @@
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:hint="Username"
+        android:hint="Email"
         android:includeFontPadding="false"
         android:inputType="text"
         android:paddingLeft="10dp"
@@ -42,7 +42,7 @@
         android:drawableRight="@drawable/ic_eye"
         android:drawablePadding="10dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="Mật khẩu"
         android:inputType="textPassword"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
@@ -55,7 +55,7 @@
         app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextLoginUsername"
-        app:layout_constraintVertical_bias="0.154" />
+        app:layout_constraintVertical_bias="0.120" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -70,16 +70,16 @@
 
     <Button
         android:id="@+id/buttonLogin"
-        android:layout_width="340dp"
+        android:layout_width="250dp"
         android:layout_height="0dp"
-        android:layout_marginTop="636dp"
+        android:layout_marginTop="620dp"
         android:background="@drawable/btn_bg"
         android:backgroundTint="@color/black"
         android:ellipsize="none"
-        android:text="Login"
+        android:text="Đăng nhập"
         android:theme="@android:style/Theme.Black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.490"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -89,13 +89,14 @@
         android:layout_height="wrap_content"
         android:text="Hồ Gươm Explore"
         android:textColor="@color/white"
-        android:textSize="30dp"
+        android:fontFamily="@font/roboto"
+        android:textSize="38dp"
         app:layout_constraintBottom_toTopOf="@+id/editTextLoginUsername"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.22" />
+        app:layout_constraintVertical_bias="0.23" />
 
     <ImageButton
         android:id="@+id/buttonRegister"
@@ -116,7 +117,9 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:textSize="15dp"
-        android:text="New User? Register now"
+        android:text="Người dùng mới? Tạo tài khoản ngay"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/buttonLogin"
         app:layout_constraintHorizontal_bias="0.501"
@@ -131,7 +134,8 @@
         android:layout_marginTop="24dp"
         android:text="Đăng nhập"
         android:textColor="@color/white"
-        android:textSize="25dp"
+        android:fontFamily="@font/roboto"
+        android:textSize="28dp"
         app:layout_constraintBottom_toTopOf="@id/editTextLoginUsername"
         app:layout_constraintEnd_toEndOf="@id/editTextLoginUsername"
         app:layout_constraintHorizontal_bias="0.455"
