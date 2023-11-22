@@ -10,19 +10,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 import org.meicode.ho_guom_explore.ManageInterface.UploadCuisineAndAccommodation;
 import org.meicode.ho_guom_explore.R;
 import org.meicode.ho_guom_explore.UserInterface.AuthenticationPage.LoginActivity;
-import org.meicode.ho_guom_explore.UserInterface.SubPages.CommentActivity;
 
 public class MoreFragment extends Fragment {
     Activity context;
 
-    Button signOutButton, uploadButton;
+    Button signOutButton, uploadButton, informationButton, shareButton;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,6 +34,23 @@ public class MoreFragment extends Fragment {
         super.onStart();
         signOutButton = (Button) context.findViewById(R.id.sign_out);
         uploadButton = context.findViewById(R.id.uploadButton);
+        informationButton = context.findViewById(R.id.button_information);
+        shareButton = context.findViewById(R.id.button_share);
+
+        informationButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                openDialog();
+            }
+        });
+
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ShareApp(context);
+            }
+        });
         signOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,5 +67,19 @@ public class MoreFragment extends Fragment {
                 startActivity(intent);
             }
         });
+    }
+
+    private void openDialog() {
+        DialogFragment dialogFragment = new DialogFragment();
+        dialogFragment.show(getActivity().getSupportFragmentManager(), "HoGuomExplore");
+    }
+
+    private void ShareApp(Activity context){
+        String appPackageName = this.context.getPackageName();
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "HoGuomExplore is a good application" );
+        sendIntent.setType("text/plain");
+        this.context.startActivity(sendIntent);
     }
 }

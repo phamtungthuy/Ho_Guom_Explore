@@ -20,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:gravity="center"
+            android:fontFamily="@font/roboto"
             android:text="Các chức năng khác"
             android:textSize="35sp"
             android:textStyle="bold" />

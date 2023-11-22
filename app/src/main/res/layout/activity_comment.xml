@@ -31,6 +31,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:text="Góp ý và đánh giá"
+            android:fontFamily="@font/roboto"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
