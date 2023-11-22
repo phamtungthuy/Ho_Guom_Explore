@@ -8,14 +8,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import org.meicode.ho_guom_explore.UserInterface.BaseActivity;
 
 import org.meicode.ho_guom_explore.R;
 
-public class VisitDetailActivity extends AppCompatActivity {
+public class VisitDetailActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visitdetail);
+
+        handleNavigationBar(findViewById(R.id.bottomNavigationView));
 
         ImageButton vsBackBtn = findViewById(R.id.vs_back_btn);
         ImageButton mapButton = findViewById(R.id.vs_map_btn);
