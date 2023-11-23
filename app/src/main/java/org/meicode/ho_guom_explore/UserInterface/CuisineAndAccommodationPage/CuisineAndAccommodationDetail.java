@@ -1,7 +1,5 @@
 package org.meicode.ho_guom_explore.UserInterface.CuisineAndAccommodationPage;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,7 +12,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import org.meicode.ho_guom_explore.R;
-import org.meicode.ho_guom_explore.ManageInterface.CuisineAndAccommodationDataClass;
+import org.meicode.ho_guom_explore.ManageInterface.CuisineAndAccommodationManagement.CuisineAndAccommodationDataClass;
 import org.meicode.ho_guom_explore.UserInterface.BaseActivity;
 
 

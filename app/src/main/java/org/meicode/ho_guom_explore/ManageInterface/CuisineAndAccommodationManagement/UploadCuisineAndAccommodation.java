@@ -1,4 +1,4 @@
-package org.meicode.ho_guom_explore.ManageInterface;
+package org.meicode.ho_guom_explore.ManageInterface.CuisineAndAccommodationManagement;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -20,7 +20,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.meicode.ho_guom_explore.R;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

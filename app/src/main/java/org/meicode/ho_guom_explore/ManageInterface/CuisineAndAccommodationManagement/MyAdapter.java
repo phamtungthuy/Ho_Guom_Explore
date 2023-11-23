@@ -1,4 +1,4 @@
-package org.meicode.ho_guom_explore.ManageInterface;
+package org.meicode.ho_guom_explore.ManageInterface.CuisineAndAccommodationManagement;
 
 import android.content.Context;
 import android.content.Intent;

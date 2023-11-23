@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ManageInterface.CuisineAndAccommodationManagement.UpdateActivity">
-
+    tools:context=".ManageInterface.EventManagement.UpdateEventActivity">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,7 +23,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Update Data"
+                android:text="Update Event Data"
                 android:textSize="30sp"
                 android:textAlignment="center"
                 android:textColor = "@color/lavender"
@@ -42,7 +40,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/updateTitle"
+                android:id="@+id/updateTopic"
                 android:background="@drawable/lavender_border"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
@@ -65,11 +63,11 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/updateAddress"
+                android:id="@+id/updateLocation"
                 android:background="@drawable/lavender_border"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
-                android:hint="Enter Address"
+                android:hint="Enter Location"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/lavender"
                 />
@@ -77,11 +75,11 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/updatePhoneNumber"
+                android:id="@+id/updateStartDate"
                 android:background="@drawable/lavender_border"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
-                android:hint="Enter Phone Number"
+                android:hint="Enter Start Date"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/lavender"
                 />
@@ -89,37 +87,15 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/updateWebsite"
+                android:id="@+id/updateEndDate"
                 android:background="@drawable/lavender_border"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"
-                android:hint="Enter Website"
+                android:hint="Enter End Date"
                 android:gravity="start|center_vertical"
                 android:textColor="@color/lavender"
                 />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:id="@+id/updateEmail"
-                android:background="@drawable/lavender_border"
-                android:layout_marginTop="20dp"
-                android:padding="16dp"
-                android:hint="Enter Email"
-                android:gravity="start|center_vertical"
-                android:textColor="@color/lavender"
-                />
-
-            <Spinner
-                android:id="@+id/fieldList"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
-                android:padding="8dp"
-                android:background="@android:drawable/btn_dropdown"
-                android:spinnerMode="dropdown"
-                app:cornerRadius ="20dp"
-                />
 
             <Button
                 android:layout_width="match_parent"
@@ -130,8 +106,6 @@
                 android:layout_marginTop="20dp"
                 app:cornerRadius = "20dp"
                 />
-
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
 </ScrollView>

@@ -1,7 +1,6 @@
 package org.meicode.ho_guom_explore.UserInterface.CuisineAndAccommodationPage;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.app.AlertDialog;
@@ -23,10 +22,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import org.meicode.ho_guom_explore.ManageInterface.CuisineAndAccommodationDataClass;
+import org.meicode.ho_guom_explore.ManageInterface.CuisineAndAccommodationManagement.CuisineAndAccommodationDataClass;
 import org.meicode.ho_guom_explore.R;
 import org.meicode.ho_guom_explore.UserInterface.BaseActivity;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;

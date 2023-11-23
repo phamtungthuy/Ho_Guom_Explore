@@ -1,4 +1,4 @@
-package org.meicode.ho_guom_explore.ManageInterface;
+package org.meicode.ho_guom_explore.ManageInterface.CuisineAndAccommodationManagement;
 
 public class CuisineAndAccommodationDataClass {
     private String dataTitle;

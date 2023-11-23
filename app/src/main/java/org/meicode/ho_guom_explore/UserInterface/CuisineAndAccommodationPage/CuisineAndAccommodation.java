@@ -24,7 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import org.meicode.ho_guom_explore.R;
-import org.meicode.ho_guom_explore.ManageInterface.CuisineAndAccommodationDataClass;
+import org.meicode.ho_guom_explore.ManageInterface.CuisineAndAccommodationManagement.CuisineAndAccommodationDataClass;
 import org.meicode.ho_guom_explore.UserInterface.BaseActivity;
 
 import java.util.ArrayList;

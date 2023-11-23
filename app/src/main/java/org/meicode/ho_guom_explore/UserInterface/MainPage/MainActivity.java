@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import org.meicode.ho_guom_explore.ManageInterface.UploadCuisineAndAccommodation;
+import org.meicode.ho_guom_explore.ManageInterface.CuisineAndAccommodationManagement.UploadCuisineAndAccommodation;
 import org.meicode.ho_guom_explore.R;
 import org.meicode.ho_guom_explore.UserInterface.AuthenticationPage.LoginActivity;
 
