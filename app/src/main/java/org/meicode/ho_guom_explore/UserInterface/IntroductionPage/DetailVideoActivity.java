@@ -7,15 +7,18 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
+import org.meicode.ho_guom_explore.UserInterface.BaseActivity;
 
 import org.meicode.ho_guom_explore.R;
 
-public class DetailVideoActivity extends AppCompatActivity {
+public class DetailVideoActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailvideo);
+
+        handleNavigationBar(findViewById(R.id.bottomNavigationView));
 
         ImageButton vdBackBtn = findViewById(R.id.vd_back_btn);
 

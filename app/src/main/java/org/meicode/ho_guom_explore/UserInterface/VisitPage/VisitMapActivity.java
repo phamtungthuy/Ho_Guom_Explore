@@ -9,15 +9,17 @@ import android.widget.ImageButton;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
+import org.meicode.ho_guom_explore.UserInterface.BaseActivity;
 import org.meicode.ho_guom_explore.R;
 
-public class VisitMapActivity extends AppCompatActivity {
+public class VisitMapActivity extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visitmap);
+
+        handleNavigationBar(findViewById(R.id.bottomNavigationView));
 
         ImageButton vsBackBtn = findViewById(R.id.vs_back_btn);
 
@@ -32,6 +34,7 @@ public class VisitMapActivity extends AppCompatActivity {
 
         WebView webView = findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
+        webView.getSettings().setJavaScriptEnabled(true);
         String mapUrl = "https://www.google.com/maps/search/?api=1&query=Hồ+Gươm";
         webView.loadUrl(mapUrl);
     }
