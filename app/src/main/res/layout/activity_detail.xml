@@ -54,7 +54,7 @@
     <ImageView
         android:id="@+id/detail_img"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="250dp"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
         android:src="@drawable/detailbg"
@@ -62,7 +62,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="432dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:overScrollMode="never"
         android:scrollbars="none"
         app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
@@ -90,25 +91,60 @@
                 android:id="@+id/dtText2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="  Hồ Hoàn Kiếm còn được gọi là Hồ Gươm là một hồ nước ngọt tự nhiên nằm ở trung tâm thành phố Hà Nội. Hồ có diện tích khoảng 12 ha. Trước kia, hồ còn có các tên gọi là hồ Lục Thủy, hồ Thủy Quân, hồ Tả Vọng và Hữu Vọng."
+                android:text="  Hồ Hoàn Kiếm thuộc phường Hàng Trống, quận Hoàn Kiếm, thủ đô Hà Nội. Bao quanh hồ là phố Lê Thái Tổ ở phía Tây, phố Đinh Tiên Hoàng ở phía Đông và phố Hàng Khay ở phía Nam."
                 android:textSize="20sp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/dtText" />
 
-            <Button
-                android:id="@+id/dtBtn"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/dtText3"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                android:text="Hướng dẫn du lịch"
+                android:text="  Quanh hồ có trồng nhiều hoa và cây cảnh mang lại cảm giác thoáng mát gần gũi với thiên nhiên. Hồ Hoàn Kiếm không chỉ là điểm nghỉ chân sau những chặng đường dài lang thang du hí, du khách đến đây còn được cảm nhận đời sống của người dân thủ đô hàng ngày."
                 android:textSize="20sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/dtText2" />
+
+            <TextView
+                android:id="@+id/dtText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Mỗi năm vào dịp tết Nguyên Đán, người người nô nức du xuân quanh hồ. Thời điểm này, hồ cũng là nơi gặp gỡ của nam nữ, chụp ảnh cưới của các đôi uyên ương, ảnh lưu niệm. Hè đến, nơi đây là điểm hóng mát lý tưởng dưới những tán cây rợp bóng. Du khách sẽ phải thảng thốt trước vẻ đẹp e lệ của những cây bằng lăng tím rạng rỡ, những cây phượng cháy đỏ."
+                android:textSize="20sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dtText3" />
+
+
+            <Button
+                android:id="@+id/dtBtn"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/blackchancery"
+                android:text="Hướng dẫn du lịch"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dtText4" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
