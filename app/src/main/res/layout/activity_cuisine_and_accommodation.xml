@@ -52,25 +52,25 @@
 
     </RelativeLayout>
 
-<!--    <LinearLayout-->
-<!--        android:id="@+id/header"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        >-->
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/header"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        >-->
 
-<!--        <TextView-->
-<!--            android:id="@+id/title"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:gravity="center"-->
-<!--            android:text="Ăn gì, ở đâu?"-->
-<!--            android:textSize="35sp"-->
-<!--            android:textStyle="bold" />-->
-<!--    </LinearLayout>-->
+    <!--        <TextView-->
+    <!--            android:id="@+id/title"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="50dp"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="Ăn gì, ở đâu?"-->
+    <!--            android:textSize="35sp"-->
+    <!--            android:textStyle="bold" />-->
+    <!--    </LinearLayout>-->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"

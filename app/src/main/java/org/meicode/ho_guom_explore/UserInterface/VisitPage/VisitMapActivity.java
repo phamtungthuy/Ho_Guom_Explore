@@ -6,6 +6,8 @@ import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
+import android.webkit.GeolocationPermissions;
+import android.webkit.WebChromeClient;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,9 +34,17 @@ public class VisitMapActivity extends BaseActivity {
             }
         });
 
+
         WebView webView = findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
         webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setGeolocationEnabled(true);
+        webView.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public void onGeolocationPermissionsShowPrompt(String origin, GeolocationPermissions.Callback callback) {
+                callback.invoke(origin, true, false);
+            }
+        });
         String mapUrl = "https://www.google.com/maps/search/?api=1&query=Hồ+Gươm";
         webView.loadUrl(mapUrl);
     }
