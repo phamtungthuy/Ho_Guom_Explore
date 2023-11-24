@@ -24,7 +24,7 @@ import org.meicode.ho_guom_explore.R;
 import org.meicode.ho_guom_explore.UserInterface.BaseActivity;
 import org.meicode.ho_guom_explore.UserInterface.VisitPage.VisitActivity;
 
-public class VisitMapActivity extends BaseActivity {
+public class VisitDetailMapActivity extends BaseActivity {
 
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1001;
 
@@ -40,7 +40,7 @@ public class VisitMapActivity extends BaseActivity {
         vsBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(VisitMapActivity.this, VisitActivity.class);
+                Intent intent = new Intent(VisitDetailMapActivity.this, VisitActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -69,7 +69,7 @@ public class VisitMapActivity extends BaseActivity {
             }
         });
 
-        String mapUrl = "https://www.google.com/maps/search/?api=1&query=Hồ+Gươm";
+        String mapUrl = getIntent().getStringExtra("mapUrl");
         webView.loadUrl(mapUrl);
     }
 
@@ -77,7 +77,7 @@ public class VisitMapActivity extends BaseActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode == LOCATION_PERMISSION_REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                String mapUrl = "https://www.google.com/maps/search/?api=1&query=Hồ+Gươm";
+                String mapUrl = getIntent().getStringExtra("mapUrl");
                 WebView webView = findViewById(R.id.webview);
                 webView.loadUrl(mapUrl);
             }
