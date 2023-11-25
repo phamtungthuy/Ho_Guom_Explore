@@ -92,27 +92,25 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:background="@color/white"
                 android:orientation="horizontal"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="20dp"
-                android:layout_marginVertical="10dp"
-                android:background="@color/white"
 
                 >
 
                 <LinearLayout
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:gravity="center_vertical"
-                    >
+                    android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/address"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="123"
-                        android:id="@+id/address"
-                        >
+                        android:text="123">
 
                     </TextView>
                 </LinearLayout>
@@ -122,22 +120,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/customerborder"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="8dp"
-                    android:gravity="center_vertical">
+                    android:padding="8dp">
 
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@drawable/ic_map"
-                    android:layout_marginEnd="8dp"/>
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_map" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Xem bản đồ"
                         android:textColor="#000"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
