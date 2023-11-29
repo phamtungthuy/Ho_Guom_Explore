@@ -1,4 +1,4 @@
-package org.meicode.ho_guom_explore.ManageInterface;
+package org.meicode.ho_guom_explore.ManageInterface.ServiceManagement;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -13,7 +13,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -29,25 +28,25 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import org.meicode.ho_guom_explore.ManageInterface.CuisineAndAccommodationManagement.CuisineAndAccommodationDataClass;
+import org.meicode.ho_guom_explore.ManageInterface.CuisineAndAccommodationManagement.UploadActivity;
 import org.meicode.ho_guom_explore.R;
 
 import java.text.DateFormat;
 import java.util.Calendar;
 
-public class UploadActivity extends AppCompatActivity {
+public class UploadServiceActivity extends AppCompatActivity {
 
     ImageView uploadImage;
     Button saveButton;
     EditText uploadTopic, uploadDesc, uploadAddress, uploadPhoneNumber, uploadWebsite, uploadEmail;
-    Spinner dropdown;
     String imageURL;
     Uri uri;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_upload);
+        setContentView(R.layout.activity_upload_service);
         uploadImage = findViewById(R.id.uploadImage);
         uploadDesc = findViewById(R.id.uploadDesc);
         uploadTopic = findViewById(R.id.uploadTopic);
@@ -58,14 +57,6 @@ public class UploadActivity extends AppCompatActivity {
 
         saveButton = findViewById(R.id.saveButton);
 
-        dropdown = findViewById(R.id.fieldList);
-//create a list of items for the spinner.
-        String[] items = new String[]{"Restaurant", "Cuisine", "Hotel", "Homestay"};
-//create an adapter to describe how the items are displayed, adapters are used in several places in android.
-//There are multiple variations of this, but this is the basic variant.
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-//set the spinners adapter to the previously created one.
-        dropdown.setAdapter(adapter);
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 new ActivityResultCallback<ActivityResult>() {
@@ -76,7 +67,7 @@ public class UploadActivity extends AppCompatActivity {
                             uri = data.getData();
                             uploadImage.setImageURI(uri);
                         } else {
-                            Toast.makeText(UploadActivity.this,
+                            Toast.makeText(UploadServiceActivity.this,
                                     "No Image Selected", Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -99,31 +90,29 @@ public class UploadActivity extends AppCompatActivity {
                 saveData();
             }
         });
-
     }
-
     public void saveData() {
         String fileName = System.currentTimeMillis() + "_" + uri.getLastPathSegment();
-        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child(dropdown.getSelectedItem().toString())
+        StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("Service")
                 .child(fileName);
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(UploadActivity.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(UploadServiceActivity.this);
         builder.setCancelable(false);
         builder.setView(R.layout.progress_layout);
         AlertDialog dialog = builder.create();
         dialog.show();
 
         storageReference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
-                while(!uriTask.isComplete());
-                Uri urlImage = uriTask.getResult();
-                imageURL = urlImage.toString();
-                uploadData();
-                dialog.dismiss();
-            }
-        })
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
+                        while(!uriTask.isComplete());
+                        Uri urlImage = uriTask.getResult();
+                        imageURL = urlImage.toString();
+                        uploadData();
+                        dialog.dismiss();
+                    }
+                })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
@@ -131,7 +120,6 @@ public class UploadActivity extends AppCompatActivity {
                     }
                 });
     }
-
     public void uploadData() {
         String title = uploadTopic.getText().toString();
         String desc = uploadDesc.getText().toString();
@@ -140,31 +128,29 @@ public class UploadActivity extends AppCompatActivity {
         String website = uploadWebsite.getText().toString();
         String email = uploadEmail.getText().toString();
 
-        String selectedField = dropdown.getSelectedItem().toString();
 
-        CuisineAndAccommodationDataClass dataClass = new CuisineAndAccommodationDataClass(title,
+        ServiceDataClass dataClass = new ServiceDataClass(title,
                 desc, address, imageURL, phoneNumber, website, email);
 
         String currentDate = DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
 
-        FirebaseDatabase.getInstance().getReference(selectedField).child(currentDate)
+        FirebaseDatabase.getInstance().getReference("Service").child(currentDate)
                 .setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()) {
-                            Toast.makeText(UploadActivity.this, "Saved", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UploadServiceActivity.this, "Saved", Toast.LENGTH_SHORT).show();
                             finish();
                         } else {
-                            Toast.makeText(UploadActivity.this, "Not Saved", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UploadServiceActivity.this, "Not Saved", Toast.LENGTH_SHORT).show();
                         }
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(UploadActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(UploadServiceActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
     }
-
 }

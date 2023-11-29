@@ -1,4 +1,4 @@
-package org.meicode.ho_guom_explore.ManageInterface;
+package org.meicode.ho_guom_explore.ManageInterface.CuisineAndAccommodationManagement;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;

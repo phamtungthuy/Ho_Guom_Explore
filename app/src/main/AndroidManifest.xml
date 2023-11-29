@@ -16,10 +16,49 @@
         android:theme="@style/Theme.Ho_Guom_Explore"
         tools:targetApi="31">
         <activity
+            android:name=".ManageInterface.PositionManagement.UploadPositionDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.PositionManagement.UploadPositionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.PositionManagement.UpdatePositionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.PositionManagement.PositionManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.ServiceManagement.UploadServiceDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.ServiceManagement.UploadServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.ServiceManagement.UpdateServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.ServiceManagement.ServiceManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.EventManagement.UpdateEventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.EventManagement.UploadEventDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.EventManagement.UploadEventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.EventManagement.EventManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.ManagementActivity"
+            android:exported="false" />
+        <activity
             android:name=".UserInterface.BaseActivity"
             android:exported="false" />
         <activity
-            android:name=".ManageInterface.UpdateActivity"
+            android:name=".ManageInterface.CuisineAndAccommodationManagement.UpdateActivity"
             android:exported="false" />
         <activity
             android:name=".UserInterface.ServicePage.ServiceActivity"
@@ -34,13 +73,13 @@
             android:name=".UserInterface.EventPage.EventDetail"
             android:exported="true" />
         <activity
-            android:name=".ManageInterface.UploadDetailActivity"
+            android:name=".ManageInterface.CuisineAndAccommodationManagement.UploadDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".ManageInterface.UploadCuisineAndAccommodation"
+            android:name=".ManageInterface.CuisineAndAccommodationManagement.UploadCuisineAndAccommodation"
             android:exported="true" />
         <activity
-            android:name=".ManageInterface.UploadActivity"
+            android:name=".ManageInterface.CuisineAndAccommodationManagement.UploadActivity"
             android:exported="false" />
         <activity
             android:name=".UserInterface.VisitPage.VisitActivity"

@@ -10,14 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-import org.meicode.ho_guom_explore.ManageInterface.UploadCuisineAndAccommodation;
+import org.meicode.ho_guom_explore.ManageInterface.ManagementActivity;
 import org.meicode.ho_guom_explore.R;
 import org.meicode.ho_guom_explore.UserInterface.AuthenticationPage.LoginActivity;
-import org.meicode.ho_guom_explore.UserInterface.SubPages.CommentActivity;
 
 public class MoreFragment extends Fragment {
     Activity context;
@@ -48,7 +46,7 @@ public class MoreFragment extends Fragment {
         uploadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, UploadCuisineAndAccommodation.class);
+                Intent intent = new Intent(context, ManagementActivity.class);
                 startActivity(intent);
             }
         });
