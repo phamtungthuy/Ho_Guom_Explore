@@ -15,6 +15,18 @@
         android:theme="@style/Theme.Ho_Guom_Explore"
         tools:targetApi="31">
         <activity
+            android:name=".ManageInterface.ServiceManagement.UploadServiceDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.ServiceManagement.UploadServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.ServiceManagement.UpdateServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.ServiceManagement.ServiceManagementActivity"
+            android:exported="false" />
+        <activity
             android:name=".ManageInterface.EventManagement.UpdateEventActivity"
             android:exported="false" />
         <activity
