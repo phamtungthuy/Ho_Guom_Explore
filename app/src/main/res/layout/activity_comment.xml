@@ -31,6 +31,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:text="Góp ý và đánh giá"
+            android:fontFamily="@font/roboto"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -87,7 +88,7 @@
         <EditText
             android:id="@+id/commentBox"
             android:layout_width="350dp"
-            android:layout_height="450dp"
+            android:layout_height="350dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/border"
             android:gravity="center"
@@ -100,13 +101,13 @@
 
         <Button
             android:id="@+id/buttonSendComment"
-            android:layout_width="200dp"
-            android:layout_height="0dp"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
             android:backgroundTint="#607D8B"
             android:text="Gửi"
             android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginTop="15dp"
+            android:textSize="28sp"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/commentBox" />
