@@ -54,7 +54,6 @@ public class ServiceDataClass {
         this.dataPhoneNumber = dataPhoneNumber;
         this.dataWebsite = dataWebsite;
         this.dataEmail = dataEmail;
-        this.key = key;
     }
 
     public ServiceDataClass() {

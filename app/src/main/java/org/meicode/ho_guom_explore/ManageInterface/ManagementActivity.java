@@ -9,6 +9,7 @@ import android.view.View;
 
 import org.meicode.ho_guom_explore.ManageInterface.CuisineAndAccommodationManagement.UploadCuisineAndAccommodation;
 import org.meicode.ho_guom_explore.ManageInterface.EventManagement.EventManagementActivity;
+import org.meicode.ho_guom_explore.ManageInterface.PositionManagement.PositionManagementActivity;
 import org.meicode.ho_guom_explore.ManageInterface.ServiceManagement.ServiceManagementActivity;
 import org.meicode.ho_guom_explore.R;
 
@@ -50,6 +51,9 @@ public class ManagementActivity extends AppCompatActivity {
                         break;
                     case "service":
                         intent = new Intent(ManagementActivity.this, ServiceManagementActivity.class);
+                        break;
+                    case "position":
+                        intent = new Intent(ManagementActivity.this, PositionManagementActivity.class);
                         break;
                 }
                 if(intent != null) {

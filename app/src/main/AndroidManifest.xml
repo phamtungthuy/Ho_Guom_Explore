@@ -15,6 +15,18 @@
         android:theme="@style/Theme.Ho_Guom_Explore"
         tools:targetApi="31">
         <activity
+            android:name=".ManageInterface.PositionManagement.UploadPositionDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.PositionManagement.UploadPositionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.PositionManagement.UpdatePositionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageInterface.PositionManagement.PositionManagementActivity"
+            android:exported="false" />
+        <activity
             android:name=".ManageInterface.ServiceManagement.UploadServiceDetailActivity"
             android:exported="false" />
         <activity

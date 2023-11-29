@@ -129,7 +129,7 @@ public class UploadServiceActivity extends AppCompatActivity {
         String email = uploadEmail.getText().toString();
 
 
-        CuisineAndAccommodationDataClass dataClass = new CuisineAndAccommodationDataClass(title,
+        ServiceDataClass dataClass = new ServiceDataClass(title,
                 desc, address, imageURL, phoneNumber, website, email);
 
         String currentDate = DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
