@@ -19,6 +19,8 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="@drawable/ancientbg"
+            android:fontFamily="@font/roboto"
             android:gravity="center"
             android:text="Liên lạc"
             android:textSize="35sp"
