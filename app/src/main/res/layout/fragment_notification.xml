@@ -18,12 +18,12 @@
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
             android:gravity="center"
             android:background="@drawable/ancientbg"
             android:fontFamily="@font/roboto"
             android:text="Thông báo"
-            android:textSize="35sp"
+            android:textSize="39sp"
             android:textStyle="bold" />
 
         <View

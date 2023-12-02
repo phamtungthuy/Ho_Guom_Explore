@@ -18,12 +18,12 @@
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
             android:background="@drawable/ancientbg"
             android:fontFamily="@font/roboto"
             android:gravity="center"
             android:text="Liên lạc"
-            android:textSize="35sp"
+            android:textSize="39sp"
             android:textStyle="bold" />
 
         <View
@@ -37,41 +37,81 @@
     </LinearLayout>
 
     <!--body-->
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/body"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/header"
-        android:orientation="vertical"
-        android:layout_marginStart="10sp"
+        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginEnd="10sp"
-        android:layout_marginBottom="10sp">
+        android:layout_marginBottom="10sp"
+        android:layout_marginTop="20sp">
 
         <TextView
+            android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Khu di tích lịch sử hồ Hoàn Kiếm:"
+            app:layout_constraintTop_toTopOf="@id/body"
+            android:text="Khu di tích lịch sử hồ Hoàn Kiếm"
             android:textSize="25sp"
             android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
             android:textStyle="bold"
+            android:fontFamily="@font/roboto"
             />
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="• Tiếp nhận kiến nghị, phản ánh: 0123456"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="7dp"
+            android:text=" • Tiếp nhận kiến nghị, phản ánh: "
+            android:fontFamily="@font/roboto"
             android:textSize="20sp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="5dp"/>
+            app:layout_constraintStart_toStartOf="@id/body"
+            app:layout_constraintTop_toBottomOf="@id/textView1"
+            app:layout_constraintEnd_toStartOf="@+id/phoneNum1"/>
+
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/phoneNum1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="• Văn phòng khu di tích: 0988888"
+            android:fontFamily="@font/roboto"
+            android:layout_marginTop="10dp"
+            android:text="0123456"
             android:textSize="20sp"
-            android:layout_marginLeft="10dp" />
+            app:layout_constraintTop_toBottomOf="@id/textView1"
+            app:layout_constraintStart_toEndOf="@id/textView2"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• Văn phòng khu di tích: "
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toStartOf="@id/body"
+            app:layout_constraintTop_toBottomOf="@id/textView2"
+            app:layout_constraintEnd_toStartOf="@+id/phoneNum2"/>
+
+        <TextView
+            android:id="@+id/phoneNum2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0123456"
+            android:fontFamily="@font/roboto"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/textView2"
+            app:layout_constraintStart_toEndOf="@id/textView3"
+          />
 
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
