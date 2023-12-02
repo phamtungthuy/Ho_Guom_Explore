@@ -20,9 +20,9 @@
             android:layout_height="70dp"
             android:background="@drawable/ancientbg"
             android:gravity="center"
-            android:fontFamily="@font/roboto"
+            android:fontFamily="@font/blackchancery"
             android:text="Bản đồ"
-            android:textSize="39sp"
+            android:textSize="50sp"
             android:textStyle="bold" />
         <View
             android:id="@+id/viewDividerForTop"
