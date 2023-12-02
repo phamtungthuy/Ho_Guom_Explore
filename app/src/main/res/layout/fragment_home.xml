@@ -13,7 +13,7 @@
         android:scaleType="centerCrop"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/header"
-        android:alpha="0.7"
+        android:alpha="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -184,8 +184,8 @@
 
                 <ImageButton
                     android:id="@+id/btnIntroduction"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/ic_museum"
                     android:contentDescription="@string/app_name"
                     android:padding="10dp"
@@ -218,8 +218,8 @@
 
                 <ImageButton
                     android:id="@+id/btnVisit"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/ic_place"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
@@ -252,8 +252,8 @@
 
                 <ImageButton
                     android:id="@+id/btnEvent"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/ic_calender"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
@@ -293,8 +293,8 @@
 
                 <ImageButton
                     android:id="@+id/btnService"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/ic_service"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
@@ -327,8 +327,8 @@
 
                 <ImageButton
                     android:id="@+id/btnCuisineAndAccommodation"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/ic_accomodation"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
@@ -361,8 +361,8 @@
 
                 <ImageButton
                     android:id="@+id/btnComment"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/ic_letter"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
