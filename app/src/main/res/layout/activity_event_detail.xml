@@ -4,16 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserInterface.CuisineAndAccommodationPage.HotelDetail">
+    android:background="@color/bgCuisineAndAccommodation"
+    tools:context=".UserInterface.EventPage.EventDetail">
 
-    <LinearLayout
-        android:id="@+id/header"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="70dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/header"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ancientbg"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+            android:background="@android:color/transparent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+
+            />
+
 
         <TextView
             android:id="@+id/title"
@@ -21,12 +43,22 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:text="Chi tiết sự kiện"
-            android:textSize="35sp"
-            android:textStyle="bold" />
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/blackchancery"
+            android:layout_centerVertical="true"
+            />
 
-
-
-    </LinearLayout>
+        <ImageButton
+            android:id="@+id/vs_map_btn"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_map"
+            tools:src="@drawable/ic_map" />
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="415dp"
@@ -44,20 +76,23 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@color/white"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="240dp"
-                    android:layout_margin="5dp"
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
                     android:adjustViewBounds="true"
-                    android:background="@drawable/event_1" />
+                    android:background="@drawable/event_1"
+                    android:scaleType="fitXY" />
 
                 <TextView
+                    android:id="@+id/eventTittle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="Sinh hoạt câu lạc bộ cờ Hồ Gươm"
+                    android:textSize="18dp"
                     android:textStyle="bold"></TextView>
             </LinearLayout>
 
@@ -68,13 +103,14 @@
                 android:background="@color/grey" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="403dp"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
+                android:background="@color/white"
                 android:paddingHorizontal="10dp">
 
                 <LinearLayout
-                    android:layout_width="240dp"
+                    android:layout_width="193dp"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:orientation="vertical">
@@ -83,6 +119,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Bắt đầu ngày"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
                         android:textColor="#000">
 
                     </TextView>
@@ -99,6 +137,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Kết thúc ngày"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
                         android:textColor="#000" />
 
                 </LinearLayout>
@@ -107,18 +147,20 @@
 
             <!-- Vị trí điền ngày-->
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="401dp"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
+                android:background="@color/white"
                 android:paddingHorizontal="10dp">
 
                 <LinearLayout
-                    android:layout_width="240dp"
+                    android:layout_width="193dp"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/startDate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="...">
@@ -128,13 +170,14 @@
 
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="193dp"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="8dp">
 
                     <TextView
+                        android:id="@+id/endDate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="..." />
@@ -150,34 +193,35 @@
                 android:background="@color/grey" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
+                android:background="@color/white"
                 android:paddingHorizontal="10dp">
 
                 <LinearLayout
-                    android:layout_width="250dp"
+                    android:layout_width="225dp"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/place"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:text="Địa điểm"
                         android:textColor="#000"></TextView>
 
                 </LinearLayout>
 
-                <LinearLayout
+                <!--<LinearLayout
                     android:id="@+id/map"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/customerborder"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="8dp"
-                    android:layout_marginTop="10dp">
+                    android:padding="8dp">
 
                     <ImageView
                         android:layout_width="24dp"
@@ -192,7 +236,7 @@
                         android:textColor="#000"
                         android:textSize="16sp" />
 
-                </LinearLayout>
+                </LinearLayout>-->
 
             </LinearLayout>
 
@@ -203,9 +247,10 @@
                 android:background="@color/grey" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="405dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
+                android:background="@color/white"
                 android:paddingHorizontal="10dp">
 
                 <TextView
@@ -213,14 +258,18 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="Thông tin sự kiện"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
                     android:textColor="#000"
 
                     />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/textDecription"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
+                    android:justificationMode="inter_word"
+                    android:layout_marginHorizontal="10dp"
                     android:text="..." />
             </LinearLayout>
         </LinearLayout>
