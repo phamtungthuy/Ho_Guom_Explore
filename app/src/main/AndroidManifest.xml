@@ -64,6 +64,9 @@
             android:name=".UserInterface.ServicePage.ServiceActivity"
             android:exported="true" />
         <activity
+            android:name=".UserInterface.ServicePage.ServiceDetail"
+            android:exported="true" />
+        <activity
             android:name=".UserInterface.EventPage.EventActivity"
             android:exported="true" />
         <activity

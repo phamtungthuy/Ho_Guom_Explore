@@ -7,36 +7,52 @@
     tools:context=".UserInterface.EventPage.EventActivity">
 
     <RelativeLayout
-        android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="70dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/header"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ancientbg"
+            android:scaleType="centerCrop"
+            />
 
         <ImageButton
-            android:id="@+id/dt_back_btn"
+            android:id="@+id/back"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+            android:background="@android:color/transparent"
             android:layout_alignParentStart="true"
-            android:background="?android:attr/selectableItemBackground"
-            android:src="?attr/homeAsUpIndicator" />
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+
+            />
+
 
         <TextView
-            android:id="@+id/dt_title"
+            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_centerInParent="true"
             android:gravity="center"
             android:text="Sự kiện trong tuần"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/blackchancery"
+            android:layout_centerVertical="true"
+            />
 
     </RelativeLayout>
 
 
     <ScrollView
+        android:id="@+id/scrollView3"
         android:layout_width="match_parent"
         android:layout_height="602dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
@@ -49,6 +65,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/bgCuisineAndAccommodation"
             android:orientation="vertical">
 
             <LinearLayout
@@ -58,8 +75,9 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/event1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="103dp"
                     android:layout_marginTop="12.5dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
@@ -77,15 +95,17 @@
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
-                    <TextView
+                    <Button
+                        android:id="@+id/e_button1"
                         android:layout_width="0dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
+                        android:layout_height="fill_parent"
                         android:layout_weight="1.5"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="Sinh hoạt CLB Cờ Hồ Gươm"/>
+                        android:backgroundTint="@color/bgCuisineAndAccommodation"
+                        android:gravity="left|center_vertical"
+                        android:text="Sinh hoạt CLB Cờ Hồ Gươm"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <View
@@ -95,6 +115,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12.5dp"
@@ -114,15 +135,18 @@
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
-                    <TextView
+                    <Button
+                        android:id="@+id/e_button2"
                         android:layout_width="0dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
+                        android:layout_height="fill_parent"
                         android:layout_weight="1.5"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="Biểu diễn các trích đoạn vở diễn, kịch ngắn" />
+                        android:backgroundTint="@color/bgCuisineAndAccommodation"
+                        android:gravity="left|center_vertical"
+                        android:text="Biểu diễn các trích đoạn kịch ngắn"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
                 </LinearLayout>
 
                 <View
@@ -132,6 +156,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12.5dp"
@@ -151,15 +176,17 @@
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
-                    <TextView
+                    <Button
+                        android:id="@+id/e_button3"
                         android:layout_width="0dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
+                        android:layout_height="fill_parent"
                         android:layout_weight="1.5"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="Trò chơi dân gian" />
+                        android:backgroundTint="@color/bgCuisineAndAccommodation"
+                        android:gravity="left|center_vertical"
+                        android:text="Trò chơi dân gian"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <View
@@ -169,6 +196,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12.5dp"
@@ -188,15 +216,17 @@
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
-                    <TextView
+                    <Button
+                        android:id="@+id/e_button4"
                         android:layout_width="0dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
+                        android:layout_height="fill_parent"
                         android:layout_weight="1.5"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="Trò chơi thông minh" />
+                        android:backgroundTint="@color/bgCuisineAndAccommodation"
+                        android:gravity="left|center_vertical"
+                        android:text="Trò chơi thông minh"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <View
@@ -206,6 +236,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12.5dp"
@@ -225,15 +256,17 @@
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
-                    <TextView
+                    <Button
+                        android:id="@+id/e_button5"
                         android:layout_width="0dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
+                        android:layout_height="fill_parent"
                         android:layout_weight="1.5"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="Các cửa hàng sách" />
+                        android:backgroundTint="@color/bgCuisineAndAccommodation"
+                        android:gravity="left|center_vertical"
+                        android:text="Các cửa hàng sách"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <View
@@ -243,6 +276,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12.5dp"
@@ -262,15 +296,17 @@
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
-                    <TextView
+                    <Button
+                        android:id="@+id/e_button6"
                         android:layout_width="0dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
+                        android:layout_height="fill_parent"
                         android:layout_weight="1.5"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="Biểu diễn hát xẩm, hát dân gian, chèo" />
+                        android:backgroundTint="@color/bgCuisineAndAccommodation"
+                        android:gravity="left|center_vertical"
+                        android:text="Biểu diễn hát xẩm, hát dân gian, chèo"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <View
@@ -280,6 +316,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12.5dp"
@@ -299,15 +336,17 @@
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
-                    <TextView
+                    <Button
+                        android:id="@+id/e_button7"
                         android:layout_width="0dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
+                        android:layout_height="fill_parent"
                         android:layout_weight="1.5"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="Biểu diễn ca nhạc, rối" />
+                        android:backgroundTint="@color/bgCuisineAndAccommodation"
+                        android:gravity="left|center_vertical"
+                        android:text="Biểu diễn ca nhạc và rối"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <View
@@ -317,6 +356,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12.5dp"
@@ -336,15 +376,17 @@
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
-                    <TextView
+                    <Button
+                        android:id="@+id/e_button8"
                         android:layout_width="0dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
+                        android:layout_height="fill_parent"
                         android:layout_weight="1.5"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="Chương trình nghệ thuật truyền thống" />
+                        android:backgroundTint="@color/bgCuisineAndAccommodation"
+                        android:gravity="left|center_vertical"
+                        android:text="Chương trình nghệ thuật truyền thống"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <View
@@ -354,6 +396,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12.5dp"
@@ -373,15 +416,17 @@
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
-                    <TextView
+                    <Button
+                        android:id="@+id/e_button9"
                         android:layout_width="0dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
+                        android:layout_height="fill_parent"
                         android:layout_weight="1.5"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="Chương trình nghệ thuật truyền thống kiểu mới" />
+                        android:backgroundTint="@color/bgCuisineAndAccommodation"
+                        android:gravity="left|center_vertical"
+                        android:text="Chương trình nghệ thuật kiểu mới"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <View
@@ -391,6 +436,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12.5dp"
@@ -410,15 +456,17 @@
                             android:scaleType="fitXY" />
                     </androidx.cardview.widget.CardView>
 
-                    <TextView
+                    <Button
+                        android:id="@+id/e_button10"
                         android:layout_width="0dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
+                        android:layout_height="fill_parent"
                         android:layout_weight="1.5"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="Biểu diễn âm nhạc truyền thống" />
+                        android:backgroundTint="@color/bgCuisineAndAccommodation"
+                        android:gravity="left|center_vertical"
+                        android:text="Biểu diễn âm nhạc truyền thống"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -441,6 +489,7 @@
         app:itemIconSize="40dp"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
         app:menu="@menu/navigation_menu" />
 
     <View
