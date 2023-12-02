@@ -84,6 +84,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/service1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -112,6 +113,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1.5"
+                        android:backgroundTint="@color/bgCuisineAndAccommodation"
+                        android:gravity="left|center_vertical"
                         android:text="Dịch vụ thuê xe điện 14 chỗ"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
@@ -128,6 +131,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/service2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -156,6 +160,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1.5"
+                        android:backgroundTint="@color/bgCuisineAndAccommodation"
+                        android:gravity="left|center_vertical"
                         android:text="Dịch vụ thuê xe điện cho trẻ em"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
@@ -173,6 +179,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/service3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -201,6 +208,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1.5"
+                        android:backgroundTint="@color/bgCuisineAndAccommodation"
+                        android:gravity="left|center_vertical"
                         android:text="Dịch vụ bán, tặng quà lưu niệm"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
@@ -217,6 +226,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/service4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -261,6 +271,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/service5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -305,6 +316,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/service6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -340,7 +352,6 @@
                         android:paddingBottom="10dp"
                         android:textSize="24sp"
                         android:textStyle="bold"/>
-
                 </LinearLayout>
 
                 <View
@@ -349,6 +360,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/service7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -393,6 +405,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/service8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -421,6 +434,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1.5"
+                        android:backgroundTint="@color/bgCuisineAndAccommodation"
+                        android:gravity="left|center_vertical"
                         android:text="Dịch vụ chụp ảnh đường phố"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
@@ -428,7 +443,6 @@
                         android:paddingBottom="10dp"
                         android:textSize="24sp"
                         android:textStyle="bold"/>
-
                 </LinearLayout>
 
                 <View

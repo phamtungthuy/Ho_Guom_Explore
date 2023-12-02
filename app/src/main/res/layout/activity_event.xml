@@ -84,6 +84,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/event1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -128,6 +129,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -172,6 +174,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -216,6 +219,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -260,6 +264,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -304,6 +309,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -348,6 +354,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -383,7 +390,6 @@
                         android:paddingBottom="10dp"
                         android:textSize="24sp"
                         android:textStyle="bold"/>
-
                 </LinearLayout>
 
                 <View
@@ -392,6 +398,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -436,6 +443,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -480,6 +488,7 @@
                     android:background="@color/grey" />
 
                 <LinearLayout
+                    android:id="@+id/event10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"

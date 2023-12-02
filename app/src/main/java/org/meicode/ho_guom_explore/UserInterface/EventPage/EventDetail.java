@@ -22,7 +22,6 @@ public class EventDetail extends BaseActivity {
         setContentView(R.layout.activity_event_detail);
         ImageButton dtBackBtn = findViewById(R.id.back);
         ImageButton mapButton = findViewById(R.id.vs_map_btn);
-
         dtBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

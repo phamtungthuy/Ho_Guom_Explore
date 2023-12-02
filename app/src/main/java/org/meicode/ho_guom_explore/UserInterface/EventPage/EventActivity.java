@@ -87,7 +87,6 @@ public class EventActivity  extends BaseActivity {
                 } else if (v.getId() == R.id.textView10 || v.getId() == R.id.imageView10) {
                     buttonText = "Event 10";
                 }
-
                 intent.putExtra("buttonText", buttonText);
                 startActivity(intent);
             }
