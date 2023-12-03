@@ -42,14 +42,6 @@
             android:src="@drawable/ic_baseline_arrow_back_ios_new_24" />
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/detail_img"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/detailbg"
-        app:layout_constraintTop_toBottomOf="@+id/header" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -58,13 +50,21 @@
         android:overScrollMode="never"
         android:scrollbars="none"
         app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
-        app:layout_constraintTop_toBottomOf="@id/detail_img"
+        app:layout_constraintTop_toBottomOf="@id/header"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/detail_img"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/detailbg" />
 
             <TextView
                 android:id="@+id/ins1"
@@ -74,6 +74,7 @@
                 android:layout_gravity="center_horizontal"
                 android:textSize="28sp"
                 android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/detail_img"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/ins2"/>
@@ -83,7 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Xe máy: bạn có thể thuê xe máy tại khách sạn hoặc các cơ sở cung cấp dịch vụ thuê xe để khám phá Thủ đô. Phương tiện này được xem là lựa chọn chủ động, phù hợp và tiết kiệm chi phí nhất cho khách du lịch."
-                android:textSize="20sp"
+                android:textSize="23sp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="10dp"
@@ -97,7 +98,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Taxi: Hà Nội có nhiều hãng taxi, phục vụ tốt nhu cầu đi lại, tham quan của du khách và người dân. Trong số đó phải kể đến hệ thống taxi Xanh GSM với chất lượng dịch vụ vượt trội, không gian xe rộng rãi, sạch đẹp, vận hành êm ái và giá cước hợp lý."
-                android:textSize="20sp"
+                android:textSize="23sp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="10dp"
@@ -111,7 +112,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Xe buýt: Để tiết kiệm chi phí di chuyển, bạn có thể đón các tuyến xe buýt có trạm dừng gần hồ Hoàn Kiếm như: tuyến xe buýt số 04, 08, 09, 11, 14, 18, 23, 31, 34, 36 hay 40."
-                android:textSize="20sp"
+                android:textSize="23sp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="10dp"
@@ -125,7 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Thuê xe ô tô: Thêm gợi ý di chuyển đến Hồ Gươm mà bạn có thể lựa chọn là thuê xe ô tô khi đi cùng nhóm bạn đông hoặc gia đình. Dịch vụ này giúp bạn thoải mái tham quan và chủ động hành trình đi lại tại Thủ đô."
-                android:textSize="20sp"
+                android:textSize="23sp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="10dp"
