@@ -51,14 +51,6 @@
             tools:src="@drawable/ic_play_video" />
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/detail_img"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/detailbg"
-        app:layout_constraintTop_toBottomOf="@+id/header" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -67,13 +59,21 @@
         android:overScrollMode="never"
         android:scrollbars="none"
         app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
-        app:layout_constraintTop_toBottomOf="@id/detail_img"
+        app:layout_constraintTop_toBottomOf="@id/header"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/detail_img"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/detailbg" />
 
             <TextView
                 android:id="@+id/dtText"
@@ -85,6 +85,7 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detail_img"
                 app:layout_constraintBottom_toTopOf="@id/dtText2"/>
 
             <TextView
@@ -92,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Hồ Hoàn Kiếm thuộc phường Hàng Trống, quận Hoàn Kiếm, thủ đô Hà Nội. Bao quanh hồ là phố Lê Thái Tổ ở phía Tây, phố Đinh Tiên Hoàng ở phía Đông và phố Hàng Khay ở phía Nam."
-                android:textSize="20sp"
+                android:textSize="23sp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="10dp"
@@ -107,7 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Quanh hồ có trồng nhiều hoa và cây cảnh mang lại cảm giác thoáng mát gần gũi với thiên nhiên. Hồ Hoàn Kiếm không chỉ là điểm nghỉ chân sau những chặng đường dài lang thang du hí, du khách đến đây còn được cảm nhận đời sống của người dân thủ đô hàng ngày."
-                android:textSize="20sp"
+                android:textSize="23sp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="10dp"
@@ -122,7 +123,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Mỗi năm vào dịp tết Nguyên Đán, người người nô nức du xuân quanh hồ. Thời điểm này, hồ cũng là nơi gặp gỡ của nam nữ, chụp ảnh cưới của các đôi uyên ương, ảnh lưu niệm. Hè đến, nơi đây là điểm hóng mát lý tưởng dưới những tán cây rợp bóng. Du khách sẽ phải thảng thốt trước vẻ đẹp e lệ của những cây bằng lăng tím rạng rỡ, những cây phượng cháy đỏ."
-                android:textSize="20sp"
+                android:textSize="23sp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="10dp"
@@ -138,7 +139,6 @@
                 android:layout_width="250dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="28dp"
-                android:fontFamily="@font/blackchancery"
                 android:text="Hướng dẫn du lịch"
                 android:textSize="20sp"
                 android:textStyle="bold"
