@@ -1,40 +1,58 @@
-package org.meicode.ho_guom_explore.UserInterface.MainPage;
+package org.meicode.ho_guom_explore.UserInterface.EventPage;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.webkit.GeolocationPermissions;
 import android.webkit.PermissionRequest;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageButton;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import org.meicode.ho_guom_explore.R;
+import org.meicode.ho_guom_explore.UserInterface.BaseActivity;
+import org.meicode.ho_guom_explore.UserInterface.EventPage.EventActivity;
 
-public class MapFragment extends Fragment {
+public class EventMapActivity extends BaseActivity {
+
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1001;
-    Activity context;
-    WebView webView;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        context = getActivity();
-        View view = inflater.inflate(R.layout.fragment_map, container, false);
-        return view;
-    }
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_visitmap);
 
-    public void onStart() {
-        super.onStart();
+        handleNavigationBar(findViewById(R.id.bottomNavigationView));
 
-        WebView webView = context.findViewById(R.id.webView);
+        ImageButton vsBackBtn = findViewById(R.id.vs_back_btn);
+
+        vsBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EventMapActivity.this, EventActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISSION_REQUEST_CODE);
+            }
+        }
+
+        WebView webView = findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setGeolocationEnabled(true);
@@ -60,7 +78,7 @@ public class MapFragment extends Fragment {
         if (requestCode == LOCATION_PERMISSION_REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 String mapUrl = "https://www.google.com/maps/search/?api=1&query=Hồ+Gươm";
-                WebView webView = context.findViewById(R.id.webView);
+                WebView webView = findViewById(R.id.webview);
                 webView.loadUrl(mapUrl);
             }
         }

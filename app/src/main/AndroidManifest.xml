@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -64,6 +66,15 @@
             android:name=".UserInterface.ServicePage.ServiceActivity"
             android:exported="true" />
         <activity
+            android:name=".UserInterface.ServicePage.ServiceDetail"
+            android:exported="true" />
+        <activity
+            android:name=".UserInterface.ServicePage.ServiceMapActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UserInterface.ServicePage.ServiceDetailMapActivity"
+            android:exported="true" />
+        <activity
             android:name=".UserInterface.EventPage.EventActivity"
             android:exported="true" />
         <activity
@@ -71,6 +82,12 @@
             android:exported="true" />
         <activity
             android:name=".UserInterface.EventPage.EventDetail"
+            android:exported="true" />
+        <activity
+            android:name=".UserInterface.EventPage.EventMapActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UserInterface.EventPage.EventDetailMapActivity"
             android:exported="true" />
         <activity
             android:name=".ManageInterface.CuisineAndAccommodationManagement.UploadDetailActivity"
