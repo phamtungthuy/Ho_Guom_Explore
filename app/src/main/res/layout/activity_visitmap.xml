@@ -30,7 +30,9 @@
             android:gravity="center"
             android:text="Bản đồ"
             android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/title"
+            />
 
         <ImageButton
             android:id="@+id/vs_back_btn"
@@ -55,17 +57,18 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:theme="@style/BottomNavTheme"
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:outlineProvider="bounds"
-        app:backgroundTint="@color/white"
-        app:itemIconSize="40dp"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemIconSize="30dp"
         app:labelVisibilityMode="labeled"
+        app:itemTextColor="@color/bottom_highlight"
+        app:itemIconTint="@color/bottom_highlight"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/navigation_menu"
-        tools:layout_editor_absoluteX="0dp" />
+        app:menu="@menu/navigation_menu" />
 
     <View
         android:id="@+id/viewDivider"

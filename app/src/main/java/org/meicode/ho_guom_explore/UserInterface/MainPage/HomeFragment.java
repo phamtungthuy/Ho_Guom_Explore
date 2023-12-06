@@ -24,6 +24,7 @@ import org.meicode.ho_guom_explore.UserInterface.VisitPage.VisitActivity;
 public class HomeFragment extends Fragment {
     Activity context;
     CardView introductionCard, visitCard, eventCard, serviceCard, cuisineAndAccommodationCard, commentCard;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

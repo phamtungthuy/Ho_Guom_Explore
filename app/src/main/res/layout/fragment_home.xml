@@ -181,6 +181,7 @@
                 android:layout_height = "105dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:id="@+id/introductionCard"
+
                 >
                 <LinearLayout
                     android:id="@+id/layoutProduce"
@@ -194,7 +195,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     android:background="@drawable/trongdong2"
-
+                    android:focusable="false"
+                    android:clickable="false"
 
                     >
 
@@ -206,6 +208,8 @@
                         android:contentDescription="@string/app_name"
                         android:padding="10dp"
                         android:src="@drawable/button_round"
+                        android:focusable="false"
+                        android:clickable="false"
                         />
 
                     <TextView
@@ -216,7 +220,10 @@
                         android:text="Giới thiệu Hồ Gươm"
                         android:textColor="@color/black"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:focusable="false"
+                        android:clickable="false"
+                        />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -247,7 +254,8 @@
                     app:layout_constraintStart_toEndOf="@id/layoutProduce"
                     app:layout_constraintTop_toTopOf="parent"
                     android:background="@drawable/trongdong2"
-
+                    android:focusable="false"
+                    android:clickable="false"
                     >
 
                     <ImageButton
@@ -257,7 +265,10 @@
                         android:background="@drawable/ic_place"
                         android:contentDescription="@string/app_name"
                         android:padding="8dp"
-                        android:src="@drawable/button_round" />
+                        android:src="@drawable/button_round"
+                        android:focusable="false"
+                        android:clickable="false"
+                        />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -267,7 +278,10 @@
                         android:text="Địa điểm tham quan"
                         android:textColor="@color/black"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:focusable="false"
+                        android:clickable="false"
+                        />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -298,7 +312,8 @@
                     app:layout_constraintStart_toEndOf="@id/layoutLocation"
                     app:layout_constraintTop_toTopOf="parent"
                     android:background="@drawable/trongdong2"
-
+                    android:focusable="false"
+                    android:clickable="false"
                     >
 
                     <ImageButton
@@ -308,7 +323,10 @@
                         android:background="@drawable/ic_calendar"
                         android:contentDescription="@string/app_name"
                         android:padding="8dp"
-                        android:src="@drawable/button_round" />
+                        android:src="@drawable/button_round"
+                        android:focusable="false"
+                        android:clickable="false"
+                        />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -318,7 +336,10 @@
                         android:text="Sự kiện"
                         android:textColor="@color/black"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:focusable="false"
+                        android:clickable="false"
+                        />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -355,7 +376,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/layoutProduce"
                     android:background="@drawable/trongdong2"
-
+                    android:focusable="false"
+                    android:clickable="false"
                     >
 
                     <ImageButton
@@ -365,7 +387,10 @@
                         android:background="@drawable/ic_service"
                         android:contentDescription="@string/app_name"
                         android:padding="8dp"
-                        android:src="@drawable/button_round" />
+                        android:src="@drawable/button_round"
+                        android:focusable="false"
+                        android:clickable="false"
+                        />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -375,7 +400,10 @@
                         android:fontFamily="@font/roboto"
                         android:textColor="@color/black"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:focusable="false"
+                        android:clickable="false"
+                        />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -405,7 +433,8 @@
                     app:layout_constraintStart_toEndOf="@id/layoutService"
                     app:layout_constraintTop_toBottomOf="@id/layoutLocation"
                     android:background="@drawable/trongdong2"
-
+                    android:focusable="false"
+                    android:clickable="false"
                     >
 
                     <ImageButton
@@ -415,7 +444,10 @@
                         android:background="@drawable/ic_accomodation"
                         android:contentDescription="@string/app_name"
                         android:padding="8dp"
-                        android:src="@drawable/button_round" />
+                        android:src="@drawable/button_round"
+                        android:focusable="false"
+                        android:clickable="false"
+                        />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -425,7 +457,10 @@
                         android:fontFamily="@font/roboto"
                         android:textColor="@color/black"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:focusable="false"
+                        android:clickable="false"
+                        />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -455,7 +490,8 @@
                     app:layout_constraintStart_toEndOf="@id/layoutAccommodation"
                     app:layout_constraintTop_toBottomOf="@id/layoutEvent"
                     android:background="@drawable/trongdong2"
-
+                    android:focusable="false"
+                    android:clickable="false"
                     >
 
                     <ImageButton
@@ -465,7 +501,10 @@
                         android:background="@drawable/ic_letter"
                         android:contentDescription="@string/app_name"
                         android:padding="8dp"
-                        android:src="@drawable/button_round" />
+                        android:src="@drawable/button_round"
+                        android:focusable="false"
+                        android:clickable="false"
+                        />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -475,7 +514,10 @@
                         android:text="Góp ý"
                         android:textColor="@color/black"
                         android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:focusable="false"
+                        android:clickable="false"
+                        />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

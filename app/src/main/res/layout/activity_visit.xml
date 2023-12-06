@@ -5,6 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/trongdong"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/header"
+        android:alpha="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="backGround" />
+
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -31,7 +44,9 @@
             android:textSize="30sp"
             android:textStyle="bold"
             android:fontFamily="@font/blackchancery"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true"
+            android:textColor="@color/title"
+            />
 
         <ImageButton
             android:id="@+id/vs_back_btn"
@@ -43,13 +58,16 @@
 
         <ImageButton
             android:id="@+id/vs_map_btn"
-            android:layout_width="50dp"
-            android:layout_height="70dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
             android:layout_alignParentEnd="true"
             android:scaleType="fitCenter"
             android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/ic_map"
-            tools:src="@drawable/ic_map" />
+            tools:src="@drawable/ic_map"
+            android:layout_centerVertical="true"
+            />
     </RelativeLayout>
 
     <ScrollView
@@ -85,8 +103,8 @@
                     app:cardElevation="4dp">
                     <ImageView
                         android:id="@+id/imageView1"
-                        android:layout_width="130dp"
-                        android:layout_height="100dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:layout_weight="0.2"
                         android:scaleType="fitXY"
                         android:src="@drawable/visit1"
@@ -103,15 +121,15 @@
                     android:paddingEnd="10dp"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textStyle="bold"/>
 
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="2dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="1dp"
                 android:background="@color/grey"
                 app:layout_constraintTop_toBottomOf="@id/diadiem1" />
 
@@ -132,8 +150,8 @@
                     app:cardElevation="4dp">
                     <ImageView
                         android:id="@+id/imageView2"
-                        android:layout_width="130dp"
-                        android:layout_height="100dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:layout_weight="0.2"
                         android:scaleType="fitXY"
                         android:src="@drawable/visit2"
@@ -151,14 +169,14 @@
                     android:paddingEnd="10dp"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textStyle="bold"/>
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="2dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="1dp"
                 android:background="@color/grey"
                 app:layout_constraintTop_toBottomOf="@id/diadiem2" />
 
@@ -179,8 +197,8 @@
                     app:cardElevation="4dp">
                     <ImageView
                         android:id="@+id/imageView3"
-                        android:layout_width="130dp"
-                        android:layout_height="100dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:layout_weight="0.2"
                         android:scaleType="fitXY"
                         android:src="@drawable/visit3"
@@ -198,15 +216,15 @@
                     android:paddingEnd="10dp"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textStyle="bold"/>
 
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="2dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="1dp"
                 android:background="@color/grey"
                 app:layout_constraintTop_toBottomOf="@id/diadiem3" />
 
@@ -227,8 +245,8 @@
                     app:cardElevation="4dp">
                     <ImageView
                         android:id="@+id/imageView4"
-                        android:layout_width="130dp"
-                        android:layout_height="100dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:layout_weight="0.2"
                         android:scaleType="fitXY"
                         android:src="@drawable/visit4"
@@ -246,15 +264,15 @@
                     android:paddingEnd="10dp"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textStyle="bold"/>
 
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="2dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="1dp"
                 android:background="@color/grey"
                 app:layout_constraintTop_toBottomOf="@id/diadiem4" />
 
@@ -275,8 +293,8 @@
                     app:cardElevation="4dp">
                     <ImageView
                         android:id="@+id/imageView5"
-                        android:layout_width="130dp"
-                        android:layout_height="100dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:layout_weight="0.2"
                         android:scaleType="fitXY"
                         android:src="@drawable/visit5"
@@ -294,15 +312,15 @@
                     android:paddingEnd="10dp"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textStyle="bold"/>
 
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="2dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="1dp"
                 android:background="@color/grey"
                 app:layout_constraintTop_toBottomOf="@id/diadiem5" />
 
@@ -323,8 +341,8 @@
                     app:cardElevation="4dp">
                     <ImageView
                         android:id="@+id/imageView6"
-                        android:layout_width="130dp"
-                        android:layout_height="100dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:layout_weight="0.2"
                         android:scaleType="fitXY"
                         android:src="@drawable/visit6"
@@ -342,15 +360,15 @@
                     android:paddingEnd="10dp"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textStyle="bold"/>
 
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="2dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="1dp"
                 android:background="@color/grey"
                 app:layout_constraintTop_toBottomOf="@id/diadiem6" />
 
@@ -358,17 +376,18 @@
     </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:theme="@style/BottomNavTheme"
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:outlineProvider="bounds"
-        app:backgroundTint="@color/white"
-        app:itemIconSize="40dp"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemIconSize="30dp"
         app:labelVisibilityMode="labeled"
+        app:itemTextColor="@color/bottom_highlight"
+        app:itemIconTint="@color/bottom_highlight"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/navigation_menu"
-        tools:layout_editor_absoluteX="0dp" />
+        app:menu="@menu/navigation_menu" />
 
     <View
         android:id="@+id/viewDivider"

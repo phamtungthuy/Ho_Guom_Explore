@@ -5,6 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/trongdong"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/header"
+        android:alpha="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="backGround" />
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -29,6 +41,7 @@
             android:fontFamily="@font/blackchancery"
             android:gravity="center"
             android:text="Giới thiệu Hồ Gươm"
+            android:textColor="@color/title"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -68,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:text="Hồ Gươm"
                 android:layout_gravity="center_horizontal"
-                android:textSize="28sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +92,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Hồ Hoàn Kiếm nằm ngay trung tâm Thủ Đô Hà Nội, có diện tích khoảng 12 hecta. Bao quanh hồ là các phố Lê Thái Tổ ở phía Tây, phố Đinh Tiên Hoàng ở phía Đông, phố Hàng Khay phía nam, tượng vua Lê Thái Tổ, cầu Thê Húc, tháp Bút, đền Bà Kiệu,...Hồ Hoàn Kiếm là di sản vô giá gắn với những truyền thuyết lịch sử và văn hóa linh thiêng từ lâu đời."
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="10dp"
@@ -94,7 +107,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Tên gọi Hoàn Kiếm chính thức xuất hiện vào đầu thế kỷ 15 gắn với truyền thuyết vua Lê Thái Tổ trả gươm báu cho Rùa thần sau khi mượn gươm chiến đấu, đánh tan giặc Minh, chính thức lên làm vua và gây dựng triều đại nhà Lê thịnh vượng."
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="10dp"
@@ -109,7 +122,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Truyền thuyết kể lại rằng, khi Lê Lợi đứng lên lãnh đạo cuộc khởi nghĩa Lam Sơn ở Thanh Hóa chống lại quân Minh, ông tình cờ bắt được thanh gươm Thuận Thiên. Nhờ có thanh gươm báu này mà ông thắng trận liên tiếp, lên ngôi vua đầu năm 1428."
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="10dp"
@@ -124,7 +137,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Trong một lần cùng quần thần dạo thuyền trên hồ Lục Thủy, chợt rùa vàng nổi lên. Khi vua tuốt gươm chỉ vào, rùa liền ngậm gươm lặn xuống đáy hồ và không nổi lên nữa. Nghĩ rằng đó là ý trời cho mượn gươm đánh giặc mà nay thiên hạ thái bình nên sai rùa đến đòi gươm. Từ đó, hồ được đổi tên thành hồ Hoàn Kiếm."
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="10dp"
@@ -139,7 +152,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Tuy nhiên khoảng cuối thế kỉ 16, chúa Trịnh cho ngăn hồ thành hai phần tả - hữu, lấy tên là Vọng. Sau đó đến năm 1884, hồ Hữu Vọng bị thực dân Pháp lấp đầy để mở mang thủ đô, còn hồ Tả Vọng được giữ lại chính là hồ Hoàn Kiếm (hồ Gươm) ngày nay."
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="10dp"
@@ -154,17 +167,18 @@
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:theme="@style/BottomNavTheme"
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:outlineProvider="bounds"
-        app:backgroundTint="@color/white"
-        app:itemIconSize="40dp"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemIconSize="30dp"
         app:labelVisibilityMode="labeled"
+        app:itemTextColor="@color/bottom_highlight"
+        app:itemIconTint="@color/bottom_highlight"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/navigation_menu"
-        tools:layout_editor_absoluteX="0dp" />
+        app:menu="@menu/navigation_menu" />
 
     <View
         android:id="@+id/viewDivider"
