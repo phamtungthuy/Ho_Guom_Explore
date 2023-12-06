@@ -12,7 +12,9 @@
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <TextView
             android:id="@+id/title"
@@ -22,7 +24,8 @@
             android:gravity="center"
             android:fontFamily="@font/blackchancery"
             android:text="Bản đồ"
-            android:textSize="50sp"
+            android:textSize="30sp"
+            android:textColor="@color/title"
             android:textStyle="bold" />
         <View
             android:id="@+id/viewDividerForTop"

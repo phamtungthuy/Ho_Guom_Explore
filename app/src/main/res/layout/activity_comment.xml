@@ -89,7 +89,8 @@
         <EditText
             android:id="@+id/commentBox"
             android:layout_width="350dp"
-            android:layout_height="300dp"
+            android:layout_height="200dp"
+            android:padding="10dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/border"
             android:gravity="center"
