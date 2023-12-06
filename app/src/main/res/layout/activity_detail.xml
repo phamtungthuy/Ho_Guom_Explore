@@ -4,7 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/trongdong"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/header"
+        android:alpha="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="backGround" />
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -30,6 +41,7 @@
             android:text="Giới thiệu Hồ Gươm"
             android:textSize="30sp"
             android:textStyle="bold"
+            android:textColor="@color/title"
             android:fontFamily="@font/blackchancery"
             android:layout_centerVertical="true" />
 
@@ -40,19 +52,11 @@
             android:layout_alignParentStart="true"
             android:background="?android:attr/selectableItemBackground"
             android:src="@drawable/ic_baseline_arrow_back_ios_new_24" />
-
-        <ImageButton
-            android:id="@+id/dt_play_btn"
-            android:layout_width="50dp"
-            android:layout_height="70dp"
-            android:layout_alignParentEnd="true"
-            android:background="?android:attr/selectableItemBackground"
-            android:src="@drawable/ic_play_video"
-            tools:src="@drawable/ic_play_video" />
     </RelativeLayout>
 
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -63,9 +67,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
 
             <ImageView
                 android:id="@+id/detail_img"
@@ -73,7 +78,41 @@
                 android:layout_height="250dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/detailbg" />
+                android:src="@drawable/detailbg"
+                android:layout_alignParentTop="true"
+                />
+
+            <androidx.cardview.widget.CardView
+
+                app:cardElevation = "8dp"
+                app:cardCornerRadius = "160dp"
+                android:layout_margin = "4dp"
+                android:foregroundGravity = "center"
+                android:layout_centerInParent = "true"
+                android:layout_width = "50dp"
+                android:layout_height = "50dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:id="@+id/dt_play_btn"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                app:cardBackgroundColor="#f9a12e "
+                android:layout_marginTop="10dp"
+                >
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_video_"
+                    tools:src="@drawable/ic_video_"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:clickable="false"
+                    android:focusable="false"
+                    />
+            </androidx.cardview.widget.CardView>
+
+
+
 
             <TextView
                 android:id="@+id/dtText"
@@ -81,57 +120,49 @@
                 android:layout_height="wrap_content"
                 android:text="Hồ Gươm"
                 android:layout_gravity="center_horizontal"
-                android:textSize="28sp"
+                android:textSize="20sp"
+                android:layout_marginTop="15dp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/detail_img"
-                app:layout_constraintBottom_toTopOf="@id/dtText2"/>
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/detail_img"
+                />
 
             <TextView
                 android:id="@+id/dtText2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Hồ Hoàn Kiếm thuộc phường Hàng Trống, quận Hoàn Kiếm, thủ đô Hà Nội. Bao quanh hồ là phố Lê Thái Tổ ở phía Tây, phố Đinh Tiên Hoàng ở phía Đông và phố Hàng Khay ở phía Nam."
-                android:textSize="23sp"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="17sp"
+                android:padding="5dp"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dtText" />
+                android:gravity="fill_horizontal"
+                android:layout_below="@id/dtText"
+                android:layout_centerInParent="true"
+                />
 
             <TextView
                 android:id="@+id/dtText3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Quanh hồ có trồng nhiều hoa và cây cảnh mang lại cảm giác thoáng mát gần gũi với thiên nhiên. Hồ Hoàn Kiếm không chỉ là điểm nghỉ chân sau những chặng đường dài lang thang du hí, du khách đến đây còn được cảm nhận đời sống của người dân thủ đô hàng ngày."
-                android:textSize="23sp"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="17sp"
+                android:padding="5dp"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dtText2" />
+                android:layout_below="@+id/dtText2"
+                android:layout_centerInParent="true"
+                />
 
             <TextView
                 android:id="@+id/dtText4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Mỗi năm vào dịp tết Nguyên Đán, người người nô nức du xuân quanh hồ. Thời điểm này, hồ cũng là nơi gặp gỡ của nam nữ, chụp ảnh cưới của các đôi uyên ương, ảnh lưu niệm. Hè đến, nơi đây là điểm hóng mát lý tưởng dưới những tán cây rợp bóng. Du khách sẽ phải thảng thốt trước vẻ đẹp e lệ của những cây bằng lăng tím rạng rỡ, những cây phượng cháy đỏ."
-                android:textSize="23sp"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="17sp"
+                android:padding="5dp"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dtText3" />
+                android:layout_below="@id/dtText3"
+                android:layout_centerInParent="true"
+                />
 
 
             <Button
@@ -142,27 +173,28 @@
                 android:text="Hướng dẫn du lịch"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dtText4" />
+                android:layout_below="@+id/dtText4"
+                android:layout_centerHorizontal="true"
+                />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
     </ScrollView>
 
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:theme="@style/BottomNavTheme"
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:outlineProvider="bounds"
-        app:backgroundTint="@color/white"
-        app:itemIconSize="40dp"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemIconSize="30dp"
         app:labelVisibilityMode="labeled"
+        app:itemTextColor="@color/bottom_highlight"
+        app:itemIconTint="@color/bottom_highlight"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/navigation_menu"
-        tools:layout_editor_absoluteX="0dp" />
+        app:menu="@menu/navigation_menu" />
 
     <View
         android:id="@+id/viewDivider"

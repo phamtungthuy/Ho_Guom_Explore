@@ -5,6 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/trongdong"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/header"
+        android:alpha="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="backGround" />
+
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -31,6 +44,7 @@
             android:textSize="30sp"
             android:textStyle="bold"
             android:fontFamily="@font/blackchancery"
+            android:textColor="@color/title"
             android:layout_centerVertical="true" />
 
         <ImageButton
@@ -64,7 +78,9 @@
                 android:layout_height="250dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/detailbg" />
+                android:src="@drawable/detailbg"
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
             <TextView
                 android:id="@+id/ins1"
@@ -72,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:text="Phương tiện di chuyển"
                 android:layout_gravity="center_horizontal"
-                android:textSize="28sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@+id/detail_img"
                 app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Xe máy: bạn có thể thuê xe máy tại khách sạn hoặc các cơ sở cung cấp dịch vụ thuê xe để khám phá Thủ đô. Phương tiện này được xem là lựa chọn chủ động, phù hợp và tiết kiệm chi phí nhất cho khách du lịch."
-                android:textSize="23sp"
+                android:textSize="17sp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="10dp"
@@ -98,7 +114,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Taxi: Hà Nội có nhiều hãng taxi, phục vụ tốt nhu cầu đi lại, tham quan của du khách và người dân. Trong số đó phải kể đến hệ thống taxi Xanh GSM với chất lượng dịch vụ vượt trội, không gian xe rộng rãi, sạch đẹp, vận hành êm ái và giá cước hợp lý."
-                android:textSize="23sp"
+                android:textSize="17sp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="10dp"
@@ -112,7 +128,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Xe buýt: Để tiết kiệm chi phí di chuyển, bạn có thể đón các tuyến xe buýt có trạm dừng gần hồ Hoàn Kiếm như: tuyến xe buýt số 04, 08, 09, 11, 14, 18, 23, 31, 34, 36 hay 40."
-                android:textSize="23sp"
+                android:textSize="17sp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="10dp"
@@ -126,7 +142,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="  Thuê xe ô tô: Thêm gợi ý di chuyển đến Hồ Gươm mà bạn có thể lựa chọn là thuê xe ô tô khi đi cùng nhóm bạn đông hoặc gia đình. Dịch vụ này giúp bạn thoải mái tham quan và chủ động hành trình đi lại tại Thủ đô."
-                android:textSize="23sp"
+                android:textSize="17sp"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
                 android:paddingTop="10dp"
@@ -143,17 +159,20 @@
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:theme="@style/BottomNavTheme"
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:outlineProvider="bounds"
-        app:backgroundTint="@color/white"
-        app:itemIconSize="40dp"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemIconSize="30dp"
         app:labelVisibilityMode="labeled"
+        app:itemTextColor="@color/bottom_highlight"
+        app:itemIconTint="@color/bottom_highlight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/navigation_menu"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_editor_absoluteX="0dp"
+        />
 
     <View
         android:id="@+id/viewDivider"
