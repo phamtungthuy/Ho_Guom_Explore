@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -22,12 +23,7 @@ import org.meicode.ho_guom_explore.UserInterface.VisitPage.VisitActivity;
 
 public class HomeFragment extends Fragment {
     Activity context;
-    ImageButton commentButton;
-    ImageButton eventButton;
-    ImageButton serviceButton;
-    ImageButton cuisineAndAccommodationButton;
-    ImageButton introductionButton;
-    ImageButton visitButton;
+    CardView introductionCard, visitCard, eventCard, serviceCard, cuisineAndAccommodationCard, commentCard;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -39,12 +35,13 @@ public class HomeFragment extends Fragment {
 
     public void onStart() {
         super.onStart();
-        commentButton = (ImageButton) context.findViewById(R.id.btnComment);
-        eventButton = (ImageButton) context.findViewById(R.id.btnEvent);
-        serviceButton = (ImageButton) context.findViewById(R.id.btnService);
-        introductionButton = (ImageButton) context.findViewById(R.id.btnIntroduction);
-        visitButton = (ImageButton) context.findViewById(R.id.btnVisit);
-        cuisineAndAccommodationButton = (ImageButton) context.findViewById(R.id.btnCuisineAndAccommodation);        commentButton.setOnClickListener(new View.OnClickListener() {
+        introductionCard = context.findViewById(R.id.introductionCard);
+        visitCard = context.findViewById(R.id.visitCard);
+        eventCard = context.findViewById(R.id.eventCard);
+        serviceCard = context.findViewById(R.id.serviceCard);
+        cuisineAndAccommodationCard = context.findViewById(R.id.cuisineAndAccommodationCard);
+        commentCard = context.findViewById(R.id.commentCard);
+        commentCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, CommentActivity.class);
@@ -52,7 +49,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        eventButton.setOnClickListener(new View.OnClickListener(){
+        eventCard.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, EventActivity.class);
@@ -60,7 +57,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        serviceButton.setOnClickListener(new View.OnClickListener() {
+        serviceCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, ServiceActivity.class);
@@ -68,7 +65,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        cuisineAndAccommodationButton.setOnClickListener(new View.OnClickListener() {
+        cuisineAndAccommodationCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, CuisineAndAccommodation.class);
@@ -76,7 +73,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        introductionButton.setOnClickListener(new View.OnClickListener() {
+        introductionCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, DetailActivity.class);
@@ -84,7 +81,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        visitButton.setOnClickListener(new View.OnClickListener() {
+        visitCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, VisitActivity.class);

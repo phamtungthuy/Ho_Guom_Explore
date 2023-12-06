@@ -36,7 +36,8 @@
             android:background="@drawable/ancientbg"
             android:fontFamily="@font/blackchancery"
             android:text="Thông báo"
-            android:textSize="50sp"
+            android:textSize="30sp"
+            android:textColor="@color/title"
             android:textStyle="bold" />
 
         <View

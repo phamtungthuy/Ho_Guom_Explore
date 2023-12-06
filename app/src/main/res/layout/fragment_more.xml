@@ -36,7 +36,8 @@
             android:gravity="center"
             android:fontFamily="@font/blackchancery"
             android:text="Các chức năng khác"
-            android:textSize="50sp"
+            android:textColor="@color/title"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <View
