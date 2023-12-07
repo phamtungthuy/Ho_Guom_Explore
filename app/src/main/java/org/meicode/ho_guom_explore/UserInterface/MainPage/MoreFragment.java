@@ -42,50 +42,7 @@ public class MoreFragment extends Fragment {
     }
 
     private void checkUserRole() {
-        FirebaseUser user = mAuth.getCurrentUser();
-//        FirebaseDatabase.getInstance().getReference("users").child(user.getUid()).child("isAdmin")
-//                .addListenerForSingleValueEvent(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                        if (dataSnapshot.exists()) {
-//                            String role = dataSnapshot.getValue(String.class);
-//
-//                            if (role.equals("1")) {
-//                                // Hiển thị nút
-//                                uploadButton.setVisibility(View.VISIBLE);
-//                            } else {
-//                                // Ẩn nút
-//                                uploadButton.setVisibility(View.GONE);
-//                            }
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError error) {
-//
-//                    }
-//                });
-
-        String role = FirebaseDatabase.getInstance().getReference("users").child(user.getUid()).child("role").toString();
-        if (role.equals("admin")) {
-            // Hiển thị nút
-            uploadButton.setVisibility(View.VISIBLE);
-        } else {
-            // Ẩn nút
-            uploadButton.setVisibility(View.GONE);
-        }
-    }
-
-    public void onStart() {
-        super.onStart();
-        signOutButton = (Button) context.findViewById(R.id.sign_out);
-        uploadButton = context.findViewById(R.id.uploadButton);
-        informationButton = context.findViewById(R.id.button_information);
-        shareButton = context.findViewById(R.id.button_share);
-
-        user = mAuth.getCurrentUser();
-
-
+         user = mAuth.getCurrentUser();
         FirebaseDatabase.getInstance().getReference("UserInfo").child(user.getUid())
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
@@ -106,6 +63,19 @@ public class MoreFragment extends Fragment {
                         // Xử lý lỗi
                     }
                 });
+    }
+
+    public void onStart() {
+        super.onStart();
+        signOutButton = (Button) context.findViewById(R.id.sign_out);
+        uploadButton = context.findViewById(R.id.uploadButton);
+        informationButton = context.findViewById(R.id.button_information);
+        shareButton = context.findViewById(R.id.button_share);
+
+        user = mAuth.getCurrentUser();
+
+        checkUserRole();
+
 
         informationButton.setOnClickListener(new View.OnClickListener() {
 
