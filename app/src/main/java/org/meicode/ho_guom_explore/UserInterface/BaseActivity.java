@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
@@ -71,4 +72,11 @@ public class BaseActivity extends AppCompatActivity {
         });
     }
 
+    public int convertToDp(int n) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, n, getResources().getDisplayMetrics());
+    }
+
+    public int convertToSp(int n) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, n, getResources().getDisplayMetrics());
+    }
 }
