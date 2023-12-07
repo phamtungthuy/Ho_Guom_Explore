@@ -21,6 +21,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.meicode.ho_guom_explore.R;
 import org.meicode.ho_guom_explore.UserInterface.MainPage.HomePageActivity;
@@ -95,10 +97,12 @@ public class LoginActivity extends AppCompatActivity {
                         .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+                                FirebaseUser user = mAuth.getCurrentUser();
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
                                     Toast.makeText(LoginActivity.this, "Login successful",
                                             Toast.LENGTH_SHORT).show();
+                                    checkUserAccessLevel(user.getUid());
                                     Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
                                     startActivity(intent);
                                     finish();
@@ -119,6 +123,11 @@ public class LoginActivity extends AppCompatActivity {
         }));
 
 
+    }
+
+    private void checkUserAccessLevel(String uid) {
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Comment").child(uid);
+//        reference.get().addOnSuccessListener()
     }
 
 

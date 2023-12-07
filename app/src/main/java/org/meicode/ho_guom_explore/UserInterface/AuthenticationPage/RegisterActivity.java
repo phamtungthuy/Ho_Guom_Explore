@@ -21,9 +21,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.meicode.ho_guom_explore.R;
 import org.meicode.ho_guom_explore.UserInterface.MainPage.MainActivity;
+
+import java.util.HashMap;
 
 public class RegisterActivity extends AppCompatActivity {
     EditText edUsername, edPassword, edConfirmPassword;
@@ -88,10 +92,21 @@ public class RegisterActivity extends AppCompatActivity {
                         .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+                                FirebaseUser user = mAuth.getCurrentUser();
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
                                     Toast.makeText(RegisterActivity.this, "Account created",
                                             Toast.LENGTH_SHORT).show();
+                                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("UserInfo").child(user.getUid());
+                                    HashMap<String,Object> userInfo = new HashMap<>();
+
+                                    userInfo.put("username", username);
+                                    userInfo.put("password", password);
+
+                                    userInfo.put("role", "user");
+
+                                    reference.setValue(userInfo);
+
                                     Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                                     startActivity(intent);
                                     finish();
